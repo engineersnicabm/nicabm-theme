@@ -1,0 +1,64 @@
+
+.footer-widgets {
+  background-color: #000;
+  clear: both;
+  font-size: 18px;
+  /*text-align: center;*/
+}
+
+.footer-widgets .wrap {
+  padding-bottom: 60px;
+  padding-top: 100px;
+}
+
+.footer-widgets,
+.footer-widgets a {
+  color: #fff;
+}
+
+.footer-widgets a {
+  font-weight: 400;
+}
+
+.footer-widgets input {
+  border: 1px solid #333;
+}
+
+.footer-widgets a.button,
+.footer-widgets a:hover,
+.footer-widgets a:focus {
+  color: #fff;
+}
+
+.footer-widgets li {
+  border-bottom: 1px dotted #666;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.footer-widgets .widget {
+  margin-bottom: 40px;
+}
+
+.footer-widgets p:last-child {
+  margin-bottom: 0;
+}
+
+.footer-widgets-1,
+.footer-widgets-2 {
+  margin: 0 3.3% 0 0;
+  width: 30.555555555%;
+}
+
+.footer-widgets-3 {
+  width: 30.555555555%;
+}
+
+.footer-widgets-1,
+.footer-widgets-2 {
+  float: left;
+}
+
+.footer-widgets-3 {
+  float: right;
+}

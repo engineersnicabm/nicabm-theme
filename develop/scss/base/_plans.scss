@@ -1,0 +1,64 @@
+
+.plans {
+  margin-top: 60px;
+}
+
+.plan {
+  background: #fff;
+  border: 1px solid #ddd;
+  color: #333;
+  float: left;
+  padding: 60px 20px;
+  width: 25%;
+}
+
+.popular {
+  background: #fa5738;
+  border: none;
+  color: #fff;
+  position: relative;
+  transform: scale(1.06);
+  -webkit-transform: scale(1.06);
+}
+
+.plan h2 {
+  font-size: 62px;
+  font-weight: 300;
+}
+
+.popular h2 {
+  color: #fff;
+}
+
+.plan .price {
+  font-size: 90px;
+  font-weight: 400;
+  margin: 0 0 20px;
+}
+
+.plan sup {
+  font-size: 30px;
+  top: -1.36em;
+}
+
+.plan .monthly {
+  font-size: 18px;
+}
+
+.plan small {
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.plan-list {
+  margin: 0 0 20px;
+  overflow: hidden;
+}
+
+.plan-list li,
+.entry-content .plan-list li {
+  list-style: none;
+  margin: 0 0 20px;
+}
+

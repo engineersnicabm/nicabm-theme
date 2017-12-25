@@ -1,0 +1,77 @@
+
+.entry-portfolio {
+  margin: 0 0 40px;
+  padding: 0;
+}
+
+.content .portfolio {
+  background: none;
+  float: left;
+  margin: 0 2% 40px 0 !important;
+  overflow: hidden;
+  padding: 0;
+  width: 30.555555555%;
+}
+
+.portfolio .post-image {
+  border: none;
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+.portfolio .post-image:hover {
+  -moz-transition:all .5s ease;
+  -o-transition:all .5s ease;
+  -webkit-transition:all .5s ease;
+  transition:all .5s ease;
+  opacity: 0.6;
+}
+
+.portfolio .gallery img:hover,
+.portfolio .gallery img:focus {
+  border: none;
+}
+
+.portfolio .post .entry-title {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 10px 0;
+}
+
+.portfolio .entry-title a {
+  margin: 0;
+  text-decoration: none;
+}
+
+.portfolio .entry-meta {
+  display: none;
+}
+
+.portfolio .more-link {
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  background: #222;
+  color: #fff;
+  display: block;
+  padding: 8px 12px;;
+  margin: 20px 0 0;
+  text-align: center;
+  text-decoration: none;
+  max-width: 150px;
+}
+
+.content .portfolio .more-link:hover {
+  background: #fa5738;
+  color: #fff;
+}
+
+.portfolio-clear {
+  clear: none;
+}
+
+.portfolio-clear-2 {
+  clear: both;
+}
+

@@ -1,0 +1,109 @@
+
+.site-header {
+  background-color: #000;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.site-header {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition:    all 0.2s ease-in-out;
+  -ms-transition:     all 0.2s ease-in-out;
+  -o-transition:      all 0.2s ease-in-out;
+  transition:         all 0.2s ease-in-out;
+}
+
+.front-page .site-header {
+  border-bottom: 1px solid #ddd;
+  padding-top: 30px;
+}
+
+.featured-section .site-header {
+  background-color: transparent;
+  border:  none;
+}
+
+.site-header.light {
+  background-color: #000;
+  padding-top: 0;
+}
+
+.site-header.light .nav-secondary {
+  display: none;
+}
+
+.admin-bar .site-header {
+  top: 32px;
+}
+
+/* Title Area
+--------------------------------------------- */
+
+.title-area {
+  float: left;
+  padding: 25px 0;
+  width: 360px;
+}
+
+.site-header.light .title-area {
+  padding: 25px 0;
+}
+
+.site-title {
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 1;
+  margin-bottom: 0;
+}
+
+.site-title a,
+.site-title a:hover {
+  color: #fff;
+}
+
+.front-page .site-header .site-title a,
+.front-page .site-header .site-title a:hover {
+  color: #fff;
+}
+
+.front-page .site-header.light .site-title a,
+.front-page .site-header light .site-title a:hover {
+  color: #fff;
+}
+
+.header-image .title-area,
+.header-image .site-header.light .title-area {
+  padding: 0;
+}
+
+.header-image .site-title > a {
+  background-size: contain !important;
+  display: block;
+  height: 76px;
+  text-indent: -9999px;
+}
+
+.header-image .light .site-title > a {
+  height: 56px;
+}
+
+.site-description {
+  display: block;
+  height: 0;
+  margin-bottom: 0;
+  text-indent: -9999px;
+}
+
+/* ## Widget Area
+--------------------------------------------- */
+
+.site-header .widget-area {
+  float: right;
+  text-align: right;
+  width: 800px;
+}
+

@@ -10,6 +10,7 @@ toolkit.extendConfig({
         homepage: pkg.homepage,
         description: pkg.description,
         author: pkg.author,
+        template: pkg.template,
         version: pkg.version,
         license: pkg.license,
         textdomain: pkg.name
@@ -33,4 +34,4 @@ toolkit.extendConfig({
     }
 });
 
-toolkit.extendTasks(gulp, { /* Task Overrides */ });
+toolkit.extendTasks(gulp, { /* Task Overrides...none at this time */ });

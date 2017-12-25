@@ -1,0 +1,54 @@
+
+.widget {
+  word-wrap: break-word;
+}
+
+.widget ol > li {
+  list-style-position: inside;
+  list-style-type: decimal;
+  padding-left: 20px;
+  text-indent: -20px;
+}
+
+.widget li li {
+  border: 0;
+  margin: 0 0 0 30px;
+  padding: 0;
+}
+
+.widget_calendar table {
+  width: 100%;
+}
+
+.widget_calendar td,
+.widget_calendar th {
+  text-align: center;
+}
+
+/* ## Featured Content
+--------------------------------------------- */
+
+.featured-content .entry {
+  margin-bottom: 20px;
+  padding: 0 0 24px;
+}
+
+.featured-content .entry-title {
+  font-size: 20px;
+  font-size: 2rem;
+}
+
+.home .featured-content .entry-title {
+  font-weight: 400;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.featuredpage .entry-title {
+  font-size: 36px;
+  font-size: 3.6rem;
+}
+
+.single .featured-image {
+  margin-bottom: 40px;
+}
