@@ -20,9 +20,11 @@ function aspire_front_page_genesis_meta() {
 		add_action( 'wp_enqueue_scripts', 'aspire_enqueue_aspire_script' );
 		function aspire_enqueue_aspire_script() {
 
-			wp_enqueue_script( 'aspire-script', get_bloginfo( 'stylesheet_directory' ) . '/js/home.js', array( 'jquery' ), '1.0.0' );
-			wp_enqueue_script( 'localScroll', get_stylesheet_directory_uri() . '/js/jquery.localScroll.min.js', array( 'scrollTo' ), '1.2.8b', true );
-			wp_enqueue_script( 'scrollTo', get_stylesheet_directory_uri() . '/js/jquery.scrollTo.min.js', array( 'jquery' ), '1.4.5-beta', true );
+			$suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
+
+			wp_enqueue_script( 'aspire-script', get_bloginfo( 'stylesheet_directory' ) . "/js/home{$suffix}.js", array( 'jquery' ), '1.0.0' );
+//			wp_enqueue_script( 'localScroll', get_stylesheet_directory_uri() . '/js/jquery.localScroll.min.js', array( 'scrollTo' ), '1.2.8b', true );
+//			wp_enqueue_script( 'scrollTo', get_stylesheet_directory_uri() . '/js/jquery.scrollTo.min.js', array( 'jquery' ), '1.4.5-beta', true );
 
 		}
 
@@ -33,7 +35,9 @@ function aspire_front_page_genesis_meta() {
 
 			if ( ! wp_is_mobile() ) {
 
-				wp_enqueue_script( 'parallax-script', get_bloginfo( 'stylesheet_directory' ) . '/js/parallax.js', array( 'jquery' ), '1.0.0' );
+				$suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
+
+				wp_enqueue_script( 'parallax-script', get_bloginfo( 'stylesheet_directory' ) . "/js/parallax{$suffix}.js", array( 'jquery' ), '1.0.0' );
 
 			}
 

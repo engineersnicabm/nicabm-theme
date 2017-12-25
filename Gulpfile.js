@@ -16,12 +16,20 @@ toolkit.extendConfig({
     },
     js: {
         'theme' : [
-            'develop/vendor/a.js',
-            'develop/js/b.js'
+            'develop/js/fadeup.js',
+            'develop/js/global.js'
         ],
-        'something-conditional' : [
-            'develop/js/standalone.js'
+        'front-page' : [
+            'develop/js/home.js',
+            'develop/js/jquery.localScroll.min.js',
+            'develop/js/jquery.scrollTo.min.js'
+        ],
+        'parallax' : [
+            'develop/js/parallax.js'
         ]
+    },
+    server: {
+        url: 'nicabm.local'
     }
 });
 
