@@ -19,6 +19,9 @@ define( 'CHILD_THEME_NAME', 'Aspire Pro' );
 define( 'CHILD_THEME_URL', 'http://my.studiopress.com/themes/aspire/' );
 define( 'CHILD_THEME_VERSION', '1.2' );
 
+// Pull in ACF Field Group Values package.
+require __DIR__ . '/vendor/timothyjensen/acf-field-group-values/acf-field-group-values.php';
+
 //* Enqueue Scripts
 add_action( 'wp_enqueue_scripts', 'aspire_enqueue_scripts_styles' );
 function aspire_enqueue_scripts_styles() {

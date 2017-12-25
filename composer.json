@@ -1,0 +1,16 @@
+{
+    "name": "nicabm/nicabm-theme",
+    "description": "Custom Genesis child theme built for NICABM.",
+    "type": "project",
+    "license": "GPL-3.0+",
+    "authors": [
+        {
+            "name": "Timothy Jensen",
+            "email": "tim@timjensen.us"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "timothyjensen/acf-field-group-values": "^2"
+    }
+}
