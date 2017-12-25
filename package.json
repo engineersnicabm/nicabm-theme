@@ -11,5 +11,8 @@
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-wp-toolkit": "^2.0"
+  },
+  "dependencies": {
+    "reflex-grid": "^2.0.1"
   }
 }

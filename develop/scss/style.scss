@@ -85,6 +85,11 @@ Portfolio
 @import "base/fadeup";
 
 
+/* Flexbox Grid — Reflex Grid
+---------------------------------------------------------------------------------------------------- */
+@import "../../node_modules/reflex-grid/scss/reflex";
+
+
 /* # Media Queries
 ---------------------------------------------------------------------------------------------------- */
 @import "base/media-queries";
