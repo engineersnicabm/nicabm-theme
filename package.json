@@ -1,0 +1,14 @@
+{
+  "name": "nicabm-theme",
+  "homepage": "https://nicabm.com",
+  "version": "0.1.0",
+  "author": "Tim Jensen <tim@timjensen.us>",
+  "description": "Custom Genesis child theme built for NICABM.",
+  "repository": "https://bitbucket.org/nicabm/nicabm-theme",
+  "license": "GPL-3.0",
+  "main": "Gulpfile.js",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-wp-toolkit": "^2.0"
+  }
+}
