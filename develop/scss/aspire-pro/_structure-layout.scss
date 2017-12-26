@@ -9,10 +9,20 @@
   max-width: 1200px;
 }
 
+.wrap {
+    &--narrow {
+        max-width: 1000px;
+    }
+
+    &--wide {
+        max-width: none;
+    }
+}
+
 .site-inner {
   background-color: #fff;
   clear: both;
-  margin-top: 170px;
+  margin-top: 90px;
   position: relative;
   z-index: 9;
   -word-wrap: break-word;

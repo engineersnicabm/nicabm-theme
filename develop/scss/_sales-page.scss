@@ -1,0 +1,30 @@
+.nicabm_program-template .site-inner {
+    margin-top: 0;
+    max-width: none;
+    padding: 0;
+}
+
+.sales-page__section {
+    background-size: cover;
+    background-position: center center;
+
+    &--padding {
+        &-normal {
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+        &-less {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+        &-more {
+            padding-top: 8rem;
+            padding-bottom: 8rem;
+        }
+    }
+
+    &--image-spacer {
+        background-attachment: fixed;
+        height: 300px;
+    }
+}
