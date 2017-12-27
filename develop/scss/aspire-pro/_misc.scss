@@ -177,3 +177,8 @@ div.pp_default .pp_bottom .pp_right {
   width: 100px;
 }
 
+.text-align {
+  &--left {
+    text-align: left;
+  }
+}

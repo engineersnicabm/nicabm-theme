@@ -10,21 +10,40 @@
 
     &--padding {
         &-normal {
-            padding-top: 4rem;
-            padding-bottom: 4rem;
+            padding-top: 6rem;
+            padding-bottom: 6rem;
         }
         &-less {
             padding-top: 2rem;
             padding-bottom: 2rem;
         }
         &-more {
-            padding-top: 8rem;
-            padding-bottom: 8rem;
+            padding-top: 10rem;
+            padding-bottom: 10rem;
         }
     }
 
     &--image-spacer {
         background-attachment: fixed;
         height: 300px;
+    }
+}
+
+.row {
+    &__content {
+        &--padding {
+            &-normal {
+                padding-top: 1.5rem;
+                padding-bottom: 1.5rem;
+            }
+            &-less {
+                padding-top: 0.5rem;
+                padding-bottom: 0.5rem;
+            }
+            &-more {
+                padding-top: 4rem;
+                padding-bottom: 4rem;
+            }
+        }
     }
 }
