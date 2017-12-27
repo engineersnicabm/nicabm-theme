@@ -16,8 +16,13 @@ $width_lookup = [
 	'full'          => 'col-xs-12 col-sm-12',
 ];
 
+$classes[] = $width_lookup[ $content['width'] ];
+
+$padding   = $row['padding'] ?? 'normal';
+$classes[] = sprintf( 'row__content row__content--padding-%s', $padding );
+
 ?>
 
-<div class="<?php echo esc_attr( $width_lookup[ $content['width'] ] ); ?>">
+<div class="<?php echo esc_attr( implode( ' ', $classes ) ); ?>">
 	<?php echo apply_filters( 'meta_content', wp_kses_post( $content['content'] ) ); // WPCS: XSS ok. ?>
 </div>

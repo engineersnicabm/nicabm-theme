@@ -6,10 +6,11 @@
 
 namespace NICABM\ChildTheme;
 
-$heading   = $row['heading'];
-$width     = $row['width'];
-$alignment = $row['align'];
-$padding   = $row['padding'] ?? 'normal';
+$heading     = $row['heading'];
+$heading_tag = $row['heading_tag'];
+$width       = $row['width'];
+$alignment   = $row['align'];
+$padding     = $row['padding'] ?? 'normal';
 
 $section_id      = sprintf( 'sales-page__section--%s-%s', get_the_ID(), $index );
 $section_classes = sprintf( 'sales-page__section sales-page__section--padding-%s', $padding );
@@ -48,14 +49,14 @@ $alignment_lookup = [
 	<div class="<?php echo esc_attr( $row_width_lookup[ $width ] ); ?>">
 		<div class="row <?php echo esc_attr( $alignment_lookup[ $alignment ] ); ?>">
 			<?php if ( ! empty( $heading ) ) : ?>
-			<h2 class="col-xs-12"><?php echo esc_html( $heading ); ?></h2>
-			<?php endif; ?>
+			<<?php echo esc_html( $heading_tag ); ?> class="col-xs-12"><?php echo esc_html( $heading ); ?></<?php echo esc_html( $heading_tag ); ?>>
+		<?php endif; ?>
 
-			<?php
+		<?php
 			array_walk( $row['content_block'], function ( $content ) {
 				include NICABM_THEME_VIEWS_DIR . '/partials/content-block.php';
 			} );
-			?>
+		?>
 		</div>
 	</div>
 </section>
