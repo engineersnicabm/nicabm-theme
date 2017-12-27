@@ -10,6 +10,6 @@
   "main": "Gulpfile.js",
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-wp-toolkit": "^2.0"
+    "gulp-wp-toolkit": "^2.1"
   }
 }
