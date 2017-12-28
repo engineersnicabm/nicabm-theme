@@ -216,6 +216,10 @@
   -ms-flex-pack: center;
   justify-content: center;
   text-align: center;
+  
+  > * > * {
+    text-align: initial;
+  }
 }
 
 .end-xs {
@@ -446,6 +450,10 @@
     -ms-flex-pack: center;
     justify-content: center;
     text-align: center;
+    
+    > * > * {
+      text-align: initial;
+    }
   }
 
   .end-sm {
@@ -677,6 +685,10 @@
     -ms-flex-pack: center;
     justify-content: center;
     text-align: center;
+
+    > * > * {
+      text-align: initial;
+    }
   }
 
   .end-md {
@@ -908,6 +920,10 @@
     -ms-flex-pack: center;
     justify-content: center;
     text-align: center;
+
+    > * > * {
+      text-align: initial;
+    }
   }
 
   .end-lg {
