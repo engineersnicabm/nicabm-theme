@@ -33,7 +33,8 @@ toolkit.extendConfig({
         url: 'nicabm.local'
     },
     css: {
-        basefontsize: 10 // Used by postcss-pxtorem.
+        basefontsize: 10, // Used by postcss-pxtorem.
+        remmediaquery: false
     }
 });
 

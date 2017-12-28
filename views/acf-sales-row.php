@@ -18,7 +18,7 @@ $inline_style = [];
 
 // Background color.
 if ( ! empty( $row['bg_color'] ) ) {
-	$inline_style[] = sprintf( 'background-color: %s;', esc_url( $row['bg_color'] ) );
+	$inline_style[] = sprintf( 'background-color: %s;', esc_attr( $row['bg_color'] ) );
 }
 
 $row_width_lookup = [
