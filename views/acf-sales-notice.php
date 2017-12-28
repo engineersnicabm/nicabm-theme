@@ -18,10 +18,10 @@ $notice_end_time   = $sales_row_content['time_end']
 	: null;
 
 // Check if current time is outside of the start-end range.
-$curent_time = current_time( 'timestamp' );
+$current_time = current_time( 'timestamp' );
 if (
-	$curent_time < $notice_start_time
-	|| isset( $notice_end_time ) && $curent_time > $notice_end_time
+	$current_time < $notice_start_time
+	|| isset( $notice_end_time ) && $current_time > $notice_end_time
 ) {
 	return '';
 }
