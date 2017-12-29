@@ -14,6 +14,20 @@ namespace NICABM\ChildTheme;
 
 use function NICABM\Utility\get_acf_json_dir;
 
+$nicabm_sale_redirect = get_sales_page_post_meta( 'nicabm_sale_redirect' );
+
+$redirect_start_time = strtotime( $nicabm_sale_redirect['redirect_time'] );
+$redirect_url        = ! empty( $nicabm_sale_redirect['redirect_url'] ) ? $nicabm_sale_redirect['redirect_url'] : home_url();
+
+// If a redirect start time is set and has passed, redirect the user.
+if (
+	$redirect_start_time
+	&& current_time( 'timestamp' ) > $redirect_start_time
+	&& ! is_user_logged_in()
+) {
+	wp_safe_redirect( $redirect_url );
+}
+
 // Replace default content with sales page rows.
 remove_all_actions( 'genesis_before_loop', 10 );
 remove_all_actions( 'genesis_before_loop', 15 );
