@@ -57,12 +57,14 @@
   font-weight: 400;
   letter-spacing: 1px;
   line-height: 1;
-  margin-bottom: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .site-title a,
 .site-title a:hover {
   color: #fff;
+  text-decoration: none;
 }
 
 .front-page .site-header .site-title a,
@@ -94,7 +96,7 @@
 .site-description {
   display: block;
   height: 0;
-  margin-bottom: 0;
+  margin: 0;
   text-indent: -9999px;
 }
 

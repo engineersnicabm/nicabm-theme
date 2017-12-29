@@ -13,16 +13,9 @@ if ( empty( $sales_row_content['time_start'] ) ) {
 }
 
 $notice_start_time = strtotime( $sales_row_content['time_start'] );
-$notice_end_time   = $sales_row_content['time_end']
-	? strtotime( $sales_row_content['time_end'] )
-	: null;
 
-// Check if current time is outside of the start-end range.
-$current_time = current_time( 'timestamp' );
-if (
-	$current_time < $notice_start_time
-	|| isset( $notice_end_time ) && $current_time > $notice_end_time
-) {
+// Return early if it's not time to display the notice.
+if ( current_time( 'timestamp' ) < $notice_start_time ) {
 	return '';
 }
 

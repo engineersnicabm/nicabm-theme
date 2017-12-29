@@ -19,12 +19,14 @@
   font-weight: 300;
   letter-spacing: 2px;
   padding: 30px 15px;
+  text-decoration: none;
   text-transform: uppercase;
 }
 
 .genesis-nav-menu a:focus,
 .genesis-nav-menu a:hover {
   color: #fa5738;
+  text-decoration: underline;
 }
 
 .site-header.light .genesis-nav-menu a {
