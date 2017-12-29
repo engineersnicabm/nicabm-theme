@@ -49,14 +49,18 @@
 
 .genesis-nav-menu.responsive-menu .menu-item--button a,
 .menu-item--button a {
+  background: $red;
+  border-radius: 0.3rem;
+  border: 3px solid $red;
   display: inline-block;
   padding: 12px 15px;
-  background: #dc3f1e;
+  text-decoration: none;
 
   &:hover,
   &:focus {
-    border: 3px solid #dc3f1e;
     background: #fff;
+    border: 3px solid $red;
+    color: $red;
   }
 }
 

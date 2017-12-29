@@ -4,12 +4,15 @@
 --------------------------------------------- */
 
 html {
-  font-size: 62.5%; /* 10px browser default */
+  font-size: 50%; /* 8px browser default */
+
+  @media only screen and (min-width: 480px) {
+    font-size: 62.5%; /* 10px browser default */
+  }
 }
 
 /* Chrome fix */
 body > div {
-  font-size: 20px;
   font-size: 2.0rem;
 }
 
@@ -17,10 +20,9 @@ body {
   background-color: #fff;
   color: #333;
   font-family: $body-font;
-  font-size: 20px;
   font-size: 2.0rem;
-  font-weight: 300;
-  line-height: 1.625;
+  font-weight: 400;
+  line-height: 1.35;
   margin: 0;
 }
 
@@ -41,8 +43,8 @@ textarea:focus,
 }
 
 a {
-  color: #fa5738;
-  text-decoration: none;
+  color: $blue-1;
+  text-decoration: underline;
 }
 
 a:hover,
@@ -52,8 +54,7 @@ a:focus {
 }
 
 p {
-  margin: 0 0 30px;
-  padding: 0;
+  margin: 1.8rem 0 0 0;
 }
 
 ol,
@@ -203,6 +204,10 @@ video,
 
 img {
   height: auto;
+
+  .content & {
+    border-radius: 5%;
+  }
 }
 
 .featured-content img,
@@ -310,22 +315,21 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"],
 .button {
-  border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  background-color: #fa5738;
-  border: 0;
+  font-family: $heading-b;
+  text-decoration: none;
+  font-size: 2.2rem;
+  font-weight: 700;
+  border-radius: 0.3rem;
   color: #fff;
-  cursor: pointer;
-  font-size: 14px;
-  font-size: 1.4rem;
-  font-weight: 400;
-  letter-spacing: 1px;
-  padding: 10px 30px;
+  background-color: $red;
+  padding: 0.8rem 4rem;
+  border: 0.5rem solid $red;
   text-transform: uppercase;
-  width: auto;
-  word-spacing: 2px;
+  cursor: pointer;
+
+  //letter-spacing: 1px;
+  //width: auto;
+  //word-spacing: 2px;
 }
 
 button:hover,
@@ -338,16 +342,15 @@ input:focus[type="button"],
 input:focus[type="reset"],
 input:focus[type="submit"],
 .button:focus  {
-  /*background-color: #fa5738;*/
-  background-color: #000;
-  color: #fff;
+  background-color: transparent;
+  color: $red;
 }
 
 .site-inner .button:hover,
 .entry-content .button:hover,
 .entry-content .button:focus {
-  background: #444;
-  color: #fff;
+  background-color: transparent;
+  color: $red;
 }
 
 .footer-widgets button,
