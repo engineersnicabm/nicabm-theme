@@ -48,6 +48,11 @@
     }
 }
 
+.nicabm-instructors {
+    max-height: 430px;
+    overflow-y: scroll;
+}
+
 .nicabm-table {
     &__row {
         &:nth-child(odd) {
