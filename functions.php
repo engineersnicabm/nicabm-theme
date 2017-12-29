@@ -11,9 +11,6 @@ load_child_theme_textdomain( 'aspire', apply_filters( 'child_theme_textdomain', 
 //* Add Image upload and Color select to WordPress Theme Customizer
 require_once( get_stylesheet_directory() . '/lib/customize.php' );
 
-//* Include Customizer CSS
-include_once( get_stylesheet_directory() . '/lib/output.php' );
-
 //* Child theme (do not remove)
 define( 'CHILD_THEME_NAME', 'Aspire Pro' );
 define( 'CHILD_THEME_URL', 'http://my.studiopress.com/themes/aspire/' );
@@ -30,7 +27,7 @@ add_action( 'wp_enqueue_scripts', 'aspire_enqueue_scripts_styles' );
 function aspire_enqueue_scripts_styles() {
 	$suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 
-	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700', array(), CHILD_THEME_VERSION );
+	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Hind|Montserrat:600|Open+Sans:400,600,700', array(), CHILD_THEME_VERSION );
 	wp_enqueue_style( 'dashicons' );
 	wp_enqueue_script( 'aspire-global', get_bloginfo( 'stylesheet_directory' ) . "/js/theme{$suffix}.js", array( 'jquery' ), '1.0.0' );
 

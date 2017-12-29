@@ -1,18 +1,5 @@
 <?php
 
-/**
- * Get default accent color for Customizer.
- *
- * Abstracted here since at least two functions use it.
- *
- * @since 1.0.0
- *
- * @return string Hex color code for accent color.
- */
-function aspire_customizer_get_default_accent_color() {
-	return '#fa5738';
-}
-
 add_action( 'customize_register', 'aspire_customizer_register' );
 /**
  * Register settings and controls with the Customizer.
@@ -94,26 +81,6 @@ function aspire_customizer_register() {
 		) ) );
 
 	}
-
-	$wp_customize->add_setting(
-		'aspire_accent_color',
-		array(
-			'default' => aspire_customizer_get_default_accent_color(),
-		)
-	);
-
-	$wp_customize->add_control(
-		new WP_Customize_Color_Control(
-			$wp_customize,
-			'aspire_accent_color',
-			array(
-				'description' => __( 'Change the default accent color for links, buttons, and more.', 'aspire' ),
-			    'label'       => __( 'Accent Color', 'aspire' ),
-			    'section'     => 'colors',
-			    'settings'    => 'aspire_accent_color',
-			)
-		)
-	);
 	
 	//* Add front page setting to the Customizer
 		$wp_customize->add_section( 'aspire_journal_section', array(
