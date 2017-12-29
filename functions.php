@@ -11,6 +11,9 @@ load_child_theme_textdomain( 'aspire', apply_filters( 'child_theme_textdomain', 
 //* Add Image upload and Color select to WordPress Theme Customizer
 require_once( get_stylesheet_directory() . '/lib/customize.php' );
 
+require_once __DIR__ . '/lib/output.php';
+
+
 //* Child theme (do not remove)
 define( 'CHILD_THEME_NAME', 'Aspire Pro' );
 define( 'CHILD_THEME_URL', 'http://my.studiopress.com/themes/aspire/' );

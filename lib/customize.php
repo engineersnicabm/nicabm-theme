@@ -1,5 +1,18 @@
 <?php
 
+/**
+ * Get default accent color for Customizer.
+ *
+ * Abstracted here since at least two functions use it.
+ *
+ * @since 1.0.0
+ *
+ * @return string Hex color code for accent color.
+ */
+function aspire_customizer_get_default_accent_color() {
+	return '#d20802';
+}
+
 add_action( 'customize_register', 'aspire_customizer_register' );
 /**
  * Register settings and controls with the Customizer.
