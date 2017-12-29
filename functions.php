@@ -23,6 +23,8 @@ define( 'NICABM_THEME_VIEWS_DIR', __DIR__ . '/views' );
 // Pull in ACF Field Group Values package.
 require __DIR__ . '/vendor/timothyjensen/acf-field-group-values/acf-field-group-values.php';
 
+require_once __DIR__ . '/lib/extend-functions.php';
+
 //* Enqueue Scripts
 add_action( 'wp_enqueue_scripts', 'aspire_enqueue_scripts_styles' );
 function aspire_enqueue_scripts_styles() {
