@@ -20,8 +20,8 @@ define( 'CHILD_THEME_URL', 'http://my.studiopress.com/themes/aspire/' );
 define( 'CHILD_THEME_VERSION', '1.2' );
 define( 'NICABM_THEME_VIEWS_DIR', __DIR__ . '/views' );
 
-// Pull in ACF Field Group Values package.
-require __DIR__ . '/vendor/timothyjensen/acf-field-group-values/acf-field-group-values.php';
+// Composer dependencies.
+require __DIR__ . '/vendor/autoload.php';
 
 require_once __DIR__ . '/lib/extend-functions.php';
 

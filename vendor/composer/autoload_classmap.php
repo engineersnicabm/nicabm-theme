@@ -6,4 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'TimJensen\\ACF\\Field_Group_Values' => $vendorDir . '/timothyjensen/acf-field-group-values/src/Field_Group_Values.php',
 );

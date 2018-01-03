@@ -6,6 +6,10 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit54ff60200a14c7ac23dd4a64a10a8689
 {
+    public static $files = array (
+        '897a9afa9cc2993be67137995e9c3727' => __DIR__ . '/..' . '/timothyjensen/acf-field-group-values/src/get_all_custom_field_meta.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
         'T' => 
         array (
@@ -20,11 +24,16 @@ class ComposerStaticInit54ff60200a14c7ac23dd4a64a10a8689
         ),
     );
 
+    public static $classMap = array (
+        'TimJensen\\ACF\\Field_Group_Values' => __DIR__ . '/..' . '/timothyjensen/acf-field-group-values/src/Field_Group_Values.php',
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit54ff60200a14c7ac23dd4a64a10a8689::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit54ff60200a14c7ac23dd4a64a10a8689::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit54ff60200a14c7ac23dd4a64a10a8689::$classMap;
 
         }, null, ClassLoader::class);
     }

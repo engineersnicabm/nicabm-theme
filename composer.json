@@ -2,7 +2,7 @@
     "name": "nicabm/nicabm-theme",
     "description": "Custom Genesis child theme built for NICABM.",
     "version": "0.2.0",
-    "type": "project",
+    "type": "wordpress-theme",
     "license": "GPL-3.0+",
     "authors": [
         {
@@ -12,6 +12,6 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "timothyjensen/acf-field-group-values": "^2"
+        "timothyjensen/acf-field-group-values": "^2.2"
     }
 }

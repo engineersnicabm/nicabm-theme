@@ -1,32 +1,35 @@
 [
     {
         "name": "timothyjensen/acf-field-group-values",
-        "version": "2.2.1",
-        "version_normalized": "2.2.1.0",
+        "version": "2.2.2",
+        "version_normalized": "2.2.2.0",
         "source": {
             "type": "git",
             "url": "https://github.com/timothyjensen/acf-field-group-values.git",
-            "reference": "2971456337fb2a821c6d8630a57a35af547d3f22"
+            "reference": "99e6f5788fbaee89086f1faa898a3e64f138af63"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/timothyjensen/acf-field-group-values/zipball/2971456337fb2a821c6d8630a57a35af547d3f22",
-            "reference": "2971456337fb2a821c6d8630a57a35af547d3f22",
+            "url": "https://api.github.com/repos/timothyjensen/acf-field-group-values/zipball/99e6f5788fbaee89086f1faa898a3e64f138af63",
+            "reference": "99e6f5788fbaee89086f1faa898a3e64f138af63",
             "shasum": ""
         },
         "require": {
             "php": "^7.0"
         },
         "require-dev": {
-            "phpunit/phpunit": "^5"
+            "phpunit/phpunit": "^6"
         },
-        "time": "2017-12-08T19:28:11+00:00",
+        "time": "2018-01-03T00:36:07+00:00",
         "type": "library",
         "installation-source": "source",
         "autoload": {
             "psr-4": {
                 "TimJensen\\ACF\\": "src/"
-            }
+            },
+            "files": [
+                "src/get_all_custom_field_meta.php"
+            ]
         },
         "notification-url": "https://packagist.org/downloads/",
         "license": [
