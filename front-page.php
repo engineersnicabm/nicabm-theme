@@ -16,19 +16,6 @@ function aspire_front_page_genesis_meta() {
 
 	if ( is_active_sidebar( 'front-page-1' ) || is_active_sidebar( 'front-page-2' ) || is_active_sidebar( 'front-page-3' ) || is_active_sidebar( 'front-page-4' ) || is_active_sidebar( 'home-mid-left' ) || is_active_sidebar( 'home-mid-right' ) || is_active_sidebar( 'home-mid-wide' ) || is_active_sidebar( 'front-page-5' ) || is_active_sidebar( 'front-page-6' ) || is_active_sidebar( 'front-page-7' ) || is_active_sidebar( 'front-page-8' ) || is_active_sidebar( 'front-page-9' ) || is_active_sidebar( 'front-page-10' ) || is_active_sidebar( 'front-page-11' ) || is_active_sidebar( 'front-page-12' ) || is_active_sidebar( 'front-page-13' )) {
 
-		//* Enqueue scripts
-		add_action( 'wp_enqueue_scripts', 'aspire_enqueue_aspire_script' );
-		function aspire_enqueue_aspire_script() {
-
-			$suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
-
-			wp_enqueue_script( 'aspire-script', get_bloginfo( 'stylesheet_directory' ) . "/js/front-page{$suffix}.js", array( 'jquery' ), '1.0.0' );
-//			wp_enqueue_script( 'localScroll', get_stylesheet_directory_uri() . '/js/jquery.localScroll.min.js', array( 'scrollTo' ), '1.2.8b', true );
-//			wp_enqueue_script( 'scrollTo', get_stylesheet_directory_uri() . '/js/jquery.scrollTo.min.js', array( 'jquery' ), '1.4.5-beta', true );
-
-		}
-
-
 		//* Enqueue parallax script
 		add_action( 'wp_enqueue_scripts', 'aspire_enqueue_parallax_script' );
 		function aspire_enqueue_parallax_script() {

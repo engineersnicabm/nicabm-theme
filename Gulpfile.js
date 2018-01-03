@@ -20,11 +20,6 @@ toolkit.extendConfig({
             'develop/js/fadeup.js',
             'develop/js/global.js'
         ],
-        'front-page' : [
-            'develop/js/home.js',
-            'develop/js/jquery.localScroll.min.js',
-            'develop/js/jquery.scrollTo.min.js'
-        ],
         'parallax' : [
             'develop/js/parallax.js'
         ]

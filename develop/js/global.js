@@ -1,5 +1,18 @@
 jQuery(function( $ ){
 
+    $(document).ready(function(){
+        $('a[href^="#"]').on('click',function (e) {
+            e.preventDefault();
+
+            var target = this.hash;
+            var $target = $(target);
+
+            $('html, body').stop().animate({
+                'scrollTop': $target.offset().top - 70
+            }, 900, 'swing');
+        });
+    });
+
 	if( $( document ).scrollTop() > 0 ){
 		$( '.site-header' ).addClass( 'light' );
 	}
@@ -37,5 +50,4 @@ jQuery(function( $ ){
 			$(this).parent().toggleClass( 'menu-open' );
 		});
 	});
-
 });
