@@ -23,7 +23,9 @@ define( 'NICABM_THEME_VIEWS_DIR', __DIR__ . '/views' );
 // Composer dependencies.
 require __DIR__ . '/vendor/autoload.php';
 
-require_once __DIR__ . '/lib/extend-functions.php';
+// Extend the theme's functions.php file.
+require_once __DIR__ . '/lib/enqueue.php';
+require_once __DIR__ . '/lib/footer.php';
 
 //* Enqueue Scripts
 add_action( 'wp_enqueue_scripts', 'aspire_enqueue_scripts_styles' );

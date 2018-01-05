@@ -1,6 +1,6 @@
 <?php
 /**
- * Extend functions.php
+ * Enqueue additional styles and scripts
  *
  * @package     NICABM\ChildTheme
  * @author      Tim Jensen <tim@timjensen.us>

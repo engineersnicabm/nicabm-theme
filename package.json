@@ -1,15 +1,23 @@
 {
   "name": "nicabm-theme",
   "homepage": "https://nicabm.com",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": "Tim Jensen <tim@timjensen.us>",
   "description": "Custom Genesis child theme built for NICABM.",
   "repository": "https://bitbucket.org/nicabm/nicabm-theme",
-  "template": "genesis",
   "license": "GPL-3.0",
   "main": "Gulpfile.js",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-wp-toolkit": "^2.1"
+  },
+  "theme": {
+    "name": "NICABM Theme",
+    "description": "Custom Genesis child theme built for NICABM.",
+    "license": "GPL-2.0+",
+    "licenseuri": "http://www.gnu.org/licenses/gpl-2.0.html",
+    "domainpath": "/develop/languages",
+    "notes": "BitBucket Theme URI: https://bitbucket.org/nicabm/nicabm-theme",
+    "template": "genesis"
   }
 }

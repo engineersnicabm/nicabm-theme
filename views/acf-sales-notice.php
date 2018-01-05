@@ -8,16 +8,29 @@ namespace NICABM\ChildTheme;
 
 $sales_row_content = get_sales_page_post_meta( 'nicabm_sales_notice' );
 
-if ( empty( $sales_row_content['time_start'] ) ) {
+if ( empty( $sales_row_content ) ) {
 	return '';
 }
 
-$notice_start_time = strtotime( $sales_row_content['time_start'] );
+foreach ( $sales_row_content as $sales_notice ) {
+	$start_time = strtotime( $sales_notice['time_start'] );
 
-// Return early if it's not time to display the notice.
-if ( current_time( 'timestamp' ) < $notice_start_time ) {
+	// Skip if it's not time to display the notice.
+	if ( current_time( 'timestamp' ) < $start_time ) {
+		continue;
+	}
+
+	// Build an array of messages indexed by the start time.
+	$sales_notices[ $start_time ] = $sales_notice['message'];
+}
+
+if ( empty( $sales_notices ) ) {
 	return '';
 }
+
+// Sort the array by keys (start time), then grab the last element of the array.
+ksort( $sales_notices );
+$notice = end( $sales_notices );
 
 $width   = 'wide';
 $padding = 'normal';
@@ -43,7 +56,6 @@ $row_width_lookup = [
 <section id="<?php echo esc_attr( $section_id ); ?>" class="<?php echo esc_attr( $section_classes ); ?>" style="<?php echo implode( '', $inline_style ); // WPCS: XSS ok.
 ?>">
 	<div class="<?php echo esc_attr( $row_width_lookup[ $width ] ); ?>">
-		<?php echo apply_filters( 'meta_content', wp_kses_post( $sales_row_content['message'] ) ); // WPCS: XSS ok.
-		?>
+		<?php echo apply_filters( 'meta_content', wp_kses_post( $notice ) ); // WPCS: XSS ok. ?>
 	</div>
 </section>

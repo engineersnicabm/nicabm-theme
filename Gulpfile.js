@@ -6,14 +6,19 @@ var gulp = require('gulp'),
 
 toolkit.extendConfig({
     theme: {
-        name: "NICABM Theme",
-        homepage: pkg.homepage,
-        description: pkg.description,
+        name: pkg.theme.name,
+        themeuri: pkg.homepage,
+        description: pkg.theme.description,
         author: pkg.author,
-        template: pkg.template,
+        authoruri: pkg.theme.authoruri,
         version: pkg.version,
         license: pkg.license,
-        textdomain: pkg.name
+        licenseuri: pkg.theme.licenseuri,
+        tags: pkg.theme.tags,
+        textdomain: pkg.name,
+        domainpath: pkg.theme.domainpath,
+        template: pkg.theme.template,
+        notes: pkg.theme.notes
     },
     js: {
         'theme' : [
