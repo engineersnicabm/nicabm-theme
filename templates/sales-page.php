@@ -42,6 +42,10 @@ add_filter( 'pre_wp_nav_menu', function ( $pre, $args ) {
 
 	$acf_meta = get_sales_page_post_meta();
 
+	if ( empty( $acf_meta['nicabm_rows'] ) ) {
+		return '';
+	}
+
 	$args->echo = true;
 
 	$nav_links = [];
@@ -80,10 +84,14 @@ add_action( 'genesis_loop', __NAMESPACE__ . '\\do_sales_page_rows' );
 function get_sales_page_post_meta( $meta_key = '' ) {
 	static $acf_meta = null;
 
-	if ( ! empty( $acf_meta ) ) {
+	if ( ! is_null( $acf_meta ) ) {
 
 		if ( empty( $meta_key ) ) {
 			return $acf_meta;
+		}
+
+		if ( ! isset( $acf_meta[ $meta_key ] ) ) {
+			return false;
 		}
 
 		return $acf_meta[ $meta_key ];
@@ -93,11 +101,8 @@ function get_sales_page_post_meta( $meta_key = '' ) {
 
 	$acf_meta = get_all_custom_field_meta( get_the_ID(), $config );
 
-	if ( empty( $meta_key ) ) {
-		return $acf_meta;
-	}
-
-	return $acf_meta[ $meta_key ];
+	// Now that $acf_meta is set we can call this function again.
+	get_sales_page_post_meta( $meta_key );
 }
 
 /**

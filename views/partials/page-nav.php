@@ -9,7 +9,12 @@
 		<ul id="menu-primary-navigation" class="menu genesis-nav-menu menu-primary responsive-menu" style="touch-action: pan-y;">
 			<?php foreach ( $nav_links as $nav_link ) : ?>
 				<?php
+				if ( empty( $nav_link['text'] ) ) {
+					continue;
+				}
+
 				unset( $classes );
+
 				$classes[] = 'menu-item';
 				if ( ! empty( $nav_link['button'] ) ) {
 					$classes[] = 'menu-item--button';
