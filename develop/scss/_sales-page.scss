@@ -74,8 +74,14 @@
     }
 
     &__mark {
-        img {
-            width: 2.5rem;
+        display: none;
+
+        @media only screen and (min-width: 800px) {
+            display: table-cell;
+
+            img {
+                width: 2.5rem;
+            }
         }
     }
 }
