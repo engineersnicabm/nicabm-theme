@@ -29,8 +29,13 @@ $row_width_lookup = [
 
 ?>
 
-<section id="<?php echo esc_attr( $section_id ); ?>" class="<?php echo esc_attr( $section_classes ); ?>" style="<?php echo implode( '', $inline_style ); // WPCS: XSS ok. ?>">
+<section id="<?php echo esc_attr( $section_id ); ?>" class="<?php echo esc_attr( $section_classes ); ?>" style="<?php echo implode( '', $inline_style ); // WPCS: XSS ok.
+?>">
 	<div class="<?php echo esc_attr( $row_width_lookup[ $width ] ); ?>">
-		<?php echo apply_filters( 'meta_content', wp_kses_post( $sales_row_content ) ); // WPCS: XSS ok. ?>
+		<div class="row">
+			<div class="col-xs-12 text-align--center">
+				<?php echo apply_filters( 'meta_content', wp_kses_post( $sales_row_content ) ); // WPCS: XSS ok. ?>
+			</div>
+		</div>
 	</div>
 </section>

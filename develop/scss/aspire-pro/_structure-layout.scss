@@ -10,13 +10,19 @@
 }
 
 .wrap {
-    &--narrow {
-        max-width: 1000px;
-    }
+  &--narrow {
+      max-width: 1000px;
+  }
 
-    &--full {
-        max-width: none;
+  &--wide {
+    @media only screen and (min-width: 1280px) {
+      max-width: 90%;
     }
+  }
+
+  &--full {
+      max-width: none;
+  }
 }
 
 .site-inner {
