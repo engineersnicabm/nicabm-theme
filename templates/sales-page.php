@@ -115,6 +115,8 @@ function do_sales_page_rows() {
 		return;
 	}
 
+	echo '<div class="entry-content">';
+
 	array_walk( $acf_meta['nicabm_rows'], function ( $row, $index ) {
 		$layout_type = isset( $row['acf_fc_layout'] ) ? $row['acf_fc_layout'] : '';
 
@@ -125,6 +127,8 @@ function do_sales_page_rows() {
 			include $template_path;
 		}
 	} );
+
+	echo '</div>';
 }
 
 // Run the Genesis loop.
