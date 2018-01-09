@@ -6,14 +6,17 @@
   top: 0;
   width: 100%;
   z-index: 999;
-}
-
-.site-header {
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition:    all 0.2s ease-in-out;
   -ms-transition:     all 0.2s ease-in-out;
   -o-transition:      all 0.2s ease-in-out;
   transition:         all 0.2s ease-in-out;
+
+  .wrap {
+    max-width: none;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 .front-page .site-header {
