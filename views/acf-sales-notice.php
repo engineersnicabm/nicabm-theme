@@ -13,15 +13,19 @@ if ( empty( $sales_row_content ) ) {
 }
 
 foreach ( $sales_row_content as $sales_notice ) {
-	$start_time = strtotime( $sales_notice['time_start'] );
+	$start_time = strtotime( $sales_notice['time_start'] ) ?? null;
+	$too_early  = current_time( 'timestamp' ) < $start_time;
 
 	// Skip if it's not time to display the notice.
-	if ( current_time( 'timestamp' ) < $start_time ) {
+	if ( $too_early ) {
 		continue;
 	}
 
 	// Build an array of messages indexed by the start time.
-	$sales_notices[ $start_time ] = $sales_notice['message'];
+	$sales_notices[ $start_time ] = [
+		'time_end' => strtotime( $sales_notice['time_end'] ) ?? null,
+		'message'  => $sales_notice['message'],
+	];
 }
 
 if ( empty( $sales_notices ) ) {
@@ -31,6 +35,11 @@ if ( empty( $sales_notices ) ) {
 // Sort the array by keys (start time), then grab the last element of the array.
 ksort( $sales_notices );
 $notice = end( $sales_notices );
+
+$notice_expired = isset( $notice['time_end'] ) && current_time( 'timestamp' ) > $notice['time_end'];
+if ( $notice_expired ) {
+	return '';
+}
 
 $width   = 'wide';
 $padding = 'normal';
@@ -53,9 +62,8 @@ $row_width_lookup = [
 
 ?>
 
-<section id="<?php echo esc_attr( $section_id ); ?>" class="<?php echo esc_attr( $section_classes ); ?>" style="<?php echo implode( '', $inline_style ); // WPCS: XSS ok.
-?>">
+<section id="<?php echo esc_attr( $section_id ); ?>" class="<?php echo esc_attr( $section_classes ); ?>" style="<?php echo implode( '', $inline_style ); // WPCS: XSS ok.?>">
 	<div class="<?php echo esc_attr( $row_width_lookup[ $width ] ); ?>">
-		<?php echo apply_filters( 'meta_content', wp_kses_post( $notice ) ); // WPCS: XSS ok. ?>
+		<?php echo apply_filters( 'meta_content', wp_kses_post( $notice['message'] ) ); // WPCS: XSS ok. ?>
 	</div>
 </section>
