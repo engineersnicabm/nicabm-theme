@@ -8,12 +8,11 @@ $background_color = $row['bg_color'] ?? '#fff';
 		<div class="row center-xs">
 			<h2 class="col-xs-12">Learn Today. Use Tomorrow.</h2>
 			<div class="col-xs-12 col-sm-12 row__content row__content--padding-normal">
-				<h4 style="text-align: center">NICABM’s courses are made for professionals, with a focus on real-world
-					solutions to clients’ problems.</h4>
+				<h3 class="learn-today-use-tomorrow__subheading nicabm-subheading text-align--center">NICABM’s courses are made for professionals, with a focus on real-world
+					solutions to clients’ problems.</h3>
 				<div class="row middle-xs">
 					<div class="col-xs-12 col-sm-6">
-						<h5 class="learn-today-use-tomorrow__text-block">NICABM’s courses are made for professionals, with a focus on
-							real-world solutions to clients’ problems.</h5>
+						<p class="learn-today-use-tomorrow__text-block">Hands-on examples of how you can bring greater healing to your clients</p>
 					</div>
 					<div class="col-xs-12 col-sm-6">
 						<img class="learn-today-use-tomorrow__image learn-today-use-tomorrow__image--right" src="https://s3.amazonaws.com/nicabm-stealthseminar/Porges2016-2/handsprout.jpg" alt="Plant sprout in hand">
@@ -21,7 +20,7 @@ $background_color = $row['bg_color'] ?? '#fff';
 				</div>
 				<div class="row middle-xs reverse">
 					<div class="col-xs-12 col-sm-6">
-						<h5 class="learn-today-use-tomorrow__text-block">Total focus on learning and skill-building that you can implement immediately</h5>
+						<p class="learn-today-use-tomorrow__text-block">Total focus on learning and skill-building that you can implement immediately</p>
 					</div>
 					<div class="col-xs-12 col-sm-6">
 						<img class="learn-today-use-tomorrow__image learn-today-use-tomorrow__image--left" src="https://s3.amazonaws.com/nicabm-stealthseminar/Porges2016-2/womanstudy.jpg" alt="Woman studying">

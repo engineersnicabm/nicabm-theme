@@ -343,8 +343,8 @@
 
 .entry-content ol,
 .entry-content ul {
-  margin-bottom: 28px;
-  margin-left: 40px;
+  margin-bottom: 0;
+  margin-left: 20px;
 }
 
 .entry-content ol > li {
@@ -353,6 +353,7 @@
 
 .entry-content ul > li {
   list-style-type: disc;
+  margin-bottom: 0.8rem;
 }
 
 .entry-content ol ol,

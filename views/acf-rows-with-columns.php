@@ -6,12 +6,14 @@
 
 namespace NICABM\ChildTheme;
 
-$heading     = $row['heading'];
-$heading_tag = $row['heading_tag'];
-$width       = $row['width'];
-$alignment   = $row['align'];
-$padding     = $row['padding'] ?? 'normal';
-$css_classes = $row['css_classes'] ?? null;
+$heading        = $row['heading'] ?? '';
+$heading_tag    = $row['heading_tag'] ?? '';
+$subheading     = $row['subheading'] ?? '';
+$subheading_tag = $row['subheading_tag'] ?? '';
+$width          = $row['width'] ?? '';
+$alignment      = $row['align'] ?? '';
+$padding        = $row['padding'] ?? 'normal';
+$css_classes    = $row['css_classes'] ?? null;
 
 $section_id = sprintf( 'sales-page__section--%s-%s', get_the_ID(), $index );
 
@@ -53,8 +55,11 @@ $alignment_lookup = [
 	<div class="<?php echo esc_attr( $row_width_lookup[ $width ] ); ?>">
 		<div class="row <?php echo esc_attr( $alignment_lookup[ $alignment ] ); ?>">
 			<?php if ( ! empty( $heading ) ) : ?>
-			<<?php echo esc_html( $heading_tag ); ?> class="col-xs-12"><?php echo esc_html( $heading ); ?></<?php echo esc_html( $heading_tag ); ?>>
-		<?php endif; ?>
+				<<?php echo esc_html( $heading_tag ); ?> class="col-xs-12"><?php echo esc_html( $heading ); ?></<?php echo esc_html( $heading_tag ); ?>>
+			<?php endif; ?>
+			<?php if ( ! empty( $subheading ) ) : ?>
+				<<?php echo esc_html( $subheading_tag ); ?> class="col-xs-12 nicabm-subheading"><?php echo esc_html( $subheading ); ?></<?php echo esc_html( $subheading_tag ); ?>>
+			<?php endif; ?>
 
 		<?php
 			array_walk( $row['content_block'], function ( $content ) {

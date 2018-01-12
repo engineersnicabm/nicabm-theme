@@ -32,7 +32,7 @@ add_action( 'wp_enqueue_scripts', 'aspire_enqueue_scripts_styles' );
 function aspire_enqueue_scripts_styles() {
 	$suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 
-	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Hind|Montserrat:600|Open+Sans:400,600,700', array(), CHILD_THEME_VERSION );
+	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Raleway:500,700|Open+Sans:400,600,700', array(), CHILD_THEME_VERSION );
 	wp_enqueue_style( 'dashicons' );
 	wp_enqueue_script( 'aspire-global', get_bloginfo( 'stylesheet_directory' ) . "/js/theme{$suffix}.js", array( 'jquery' ), '1.0.0' );
 
