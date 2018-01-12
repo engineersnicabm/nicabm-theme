@@ -13,11 +13,12 @@ require_once( get_stylesheet_directory() . '/lib/customize.php' );
 
 require_once __DIR__ . '/lib/output.php';
 
+$nicabm_theme = wp_get_theme();
 
 //* Child theme (do not remove)
-define( 'CHILD_THEME_NAME', 'Aspire Pro' );
-define( 'CHILD_THEME_URL', 'http://my.studiopress.com/themes/aspire/' );
-define( 'CHILD_THEME_VERSION', '1.2' );
+define( 'CHILD_THEME_NAME', $nicabm_theme->get( 'Name' ) );
+define( 'CHILD_THEME_URL', $nicabm_theme->get( 'Theme URI' ) );
+define( 'CHILD_THEME_VERSION', $nicabm_theme->get( 'Version' ) );
 define( 'NICABM_THEME_VIEWS_DIR', __DIR__ . '/views' );
 
 // Composer dependencies.
