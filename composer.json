@@ -1,7 +1,7 @@
 {
     "name": "nicabm/nicabm-theme",
     "description": "Custom Genesis child theme built for NICABM.",
-    "version": "0.2.3",
+    "version": "0.2.4",
     "type": "wordpress-theme",
     "license": "GPL-3.0+",
     "authors": [
