@@ -7,10 +7,10 @@ $background_color = $row['bg_color'] ?? '#fff';
 	<div class="wrap wrap--narrow">
 		<div class="row center-xs">
 			<h2 class="col-xs-12">Learn Today. Use Tomorrow.</h2>
-			<div class="col-xs-12 col-sm-12 row__content row__content--padding-normal">
+			<div class="col-xs-12 col-sm-12 row__content padding-bottom--15">
 				<h3 class="learn-today-use-tomorrow__subheading nicabm-subheading text-align--center">NICABM’s courses are made for professionals, with a focus on real-world
 					solutions to clients’ problems.</h3>
-				<div class="row middle-xs">
+				<div class="row row--900 row--center middle-xs">
 					<div class="col-xs-12 col-sm-6">
 						<p class="learn-today-use-tomorrow__text-block">Hands-on examples of how you can bring greater healing to your clients</p>
 					</div>
@@ -18,7 +18,7 @@ $background_color = $row['bg_color'] ?? '#fff';
 						<img class="learn-today-use-tomorrow__image learn-today-use-tomorrow__image--right" src="https://s3.amazonaws.com/nicabm-stealthseminar/Porges2016-2/handsprout.jpg" alt="Plant sprout in hand">
 					</div>
 				</div>
-				<div class="row middle-xs reverse">
+				<div class="row row--900 row--center middle-xs reverse">
 					<div class="col-xs-12 col-sm-6">
 						<p class="learn-today-use-tomorrow__text-block">Total focus on learning and skill-building that you can implement immediately</p>
 					</div>

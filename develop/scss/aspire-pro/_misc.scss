@@ -185,3 +185,22 @@ div.pp_default .pp_bottom .pp_right {
     text-align: center;
   }
 }
+
+.padding {
+  &-bottom {
+    &--15 {
+      padding-bottom: 1.5rem;
+    }
+  }
+}
+
+.row {
+  &--900 {
+    max-width: 900px;
+  }
+
+  &--center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

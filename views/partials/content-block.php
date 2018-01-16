@@ -18,7 +18,7 @@ $width_lookup = [
 
 $classes[] = $width_lookup[ $content['width'] ];
 
-$padding   = $row['padding'] ?? 'normal';
+$padding   = $content['padding'] ?? 'normal';
 $classes[] = sprintf( 'row__content row__content--padding-%s', $padding );
 
 ?>
