@@ -2,6 +2,10 @@
 .sidebar {
   font-size: 16px;
   font-size: 1.6rem;
+
+  a:not(:hover):not(:focus) {
+    color: $black;
+  }
 }
 
 .sidebar li {
