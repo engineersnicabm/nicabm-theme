@@ -34,7 +34,7 @@
 
 .image-section a.button:hover {
   background-color: #fff;
-  color: #333;
+  color: $black;
 }
 
 .solid-section {
@@ -183,7 +183,7 @@
 }
 
 .front-page-12 .image-section {
-  color: #333;
+  color: $black;
 }
 
 .front-page-12 .image-section a {
@@ -368,7 +368,7 @@
 
 
 .entry-content code {
-  background-color: #333;
+  background-color: $black;
   color: #ddd;
 }
 
@@ -435,7 +435,7 @@ p.entry-meta {
   -moz-border-radius: 6px;
   -ms-border-radius: 6px;
   -webkit-border-radius: 6px;
-  background-color: #333;
+  background-color: $black;
   color: #fff;
   cursor: pointer;
   display: inline-block;

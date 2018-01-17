@@ -111,19 +111,22 @@
 
 .entry-title a,
 .sidebar .widget-title a {
-  color: #333;
+  color: $black;
+  font-weight: 600;
+  text-decoration: none;
 }
 
 .entry-title a:hover,
 .entry-title a:focus {
   color: #fa5738;
+  text-decoration: underline;
 }
 
 .sidebar .widget-title,
 .sidebar h4 {
   font-size: 18px;
   font-size: 1.8rem;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.6;
   margin-bottom: 10px;
   text-transform: uppercase;
