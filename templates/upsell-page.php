@@ -22,6 +22,12 @@ remove_all_actions( 'genesis_loop', 5 );
 remove_all_actions( 'genesis_loop', 10 );
 remove_all_actions( 'genesis_loop', 15 );
 
+add_filter( 'genesis_attr_site-header', function( $attributes ) {
+	$attributes['class'] .= ' site-header--static';
+
+	return $attributes;
+} );
+
 // Remove the Genesis structural wrap from the header for styling purposes.
 remove_genesis_structural_wrap( 'header' );
 
