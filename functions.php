@@ -25,6 +25,7 @@ define( 'NICABM_THEME_VIEWS_DIR', __DIR__ . '/views' );
 require __DIR__ . '/vendor/autoload.php';
 
 // Extend the theme's functions.php file.
+require_once __DIR__ . '/lib/helpers.php';
 require_once __DIR__ . '/lib/enqueue.php';
 require_once __DIR__ . '/lib/footer.php';
 

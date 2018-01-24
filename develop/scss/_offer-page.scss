@@ -1,0 +1,17 @@
+.offer-page {
+	&__site-header {
+		&-row {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 3rem 0;
+		}
+	}
+
+	&__intro-text {
+		color: #fff;
+	}
+
+	&__page-heading {
+		color: $gold;
+	}
+}

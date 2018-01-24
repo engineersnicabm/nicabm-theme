@@ -26,6 +26,7 @@ if (
 	&& ! is_user_logged_in()
 ) {
 	wp_safe_redirect( $redirect_url );
+	exit();
 }
 
 // Replace default content with sales page rows.
@@ -74,7 +75,6 @@ add_filter( 'pre_wp_nav_menu', function ( $pre, $args ) {
 	return ob_get_clean();
 }, 10, 2 );
 
-add_action( 'genesis_loop', __NAMESPACE__ . '\\do_sales_page_rows' );
 /**
  * Returns the relevant post meta for the current page.
  *
@@ -82,29 +82,10 @@ add_action( 'genesis_loop', __NAMESPACE__ . '\\do_sales_page_rows' );
  * @return mixed
  */
 function get_sales_page_post_meta( $meta_key = '' ) {
-	static $acf_meta = null;
-
-	if ( ! is_null( $acf_meta ) ) {
-
-		if ( empty( $meta_key ) ) {
-			return $acf_meta;
-		}
-
-		if ( ! isset( $acf_meta[ $meta_key ] ) ) {
-			return false;
-		}
-
-		return $acf_meta[ $meta_key ];
-	}
-
-	$config = json_decode( file_get_contents( get_acf_json_dir() . '/group_5a414a346a088.json' ), true );
-
-	$acf_meta = get_all_custom_field_meta( get_the_ID(), $config );
-
-	// Now that $acf_meta is set we can call this function again.
-	get_sales_page_post_meta( $meta_key );
+	return get_post_meta_from_json( get_the_ID(), 'group_5a414a346a088', $meta_key );
 }
 
+add_action( 'genesis_loop', __NAMESPACE__ . '\\do_sales_page_rows' );
 /**
  * Loop through all the layout rows and load the appropriate template.
  */
