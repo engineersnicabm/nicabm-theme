@@ -13,20 +13,26 @@ $gold: #fbd23a;
 $link: $blue-2;
 $link-hover: #fa5738;
 
+$screen--xs: 460px;
+$screen--s:  768px;
+$screen--m:  1024px;
+$screen--l:  1280px;
+$screen--xl: 1440px;
+
 // Breakpoints
 @mixin breakpoint($size) {
 
 	@if $size == xs {
-		@media (min-width: 460px)  { @content; }
+		@media only screen and (min-width: $screen--xs)  { @content; }
 	} @else if $size == sm {
-		@media (min-width: 768px) { @content; }
+		@media only screen and (min-width: $screen--s) { @content; }
 	} @else if $size == md {
-		@media (min-width: 1024px) { @content; }
+		@media only screen and (min-width: $screen--m) { @content; }
 	} @else if $size == lg {
-		@media (min-width: 1280px) { @content; }
+		@media only screen and (min-width: $screen--l) { @content; }
 	} @else if $size == xl {
-		@media (min-width: 1440px) { @content; }
+		@media only screen and (min-width: $screen--xl) { @content; }
 	} @else {
-		@media (min-width: $size) { @content; }
+		@media only screen and (min-width: $size) { @content; }
 	}
 }

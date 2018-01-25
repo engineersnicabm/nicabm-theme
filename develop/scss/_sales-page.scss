@@ -120,9 +120,9 @@
 		display: none;
 		width: 8.5rem;
 
-		@media only screen and (min-width: 800px) {
+		@include breakpoint($screen--s) {
 			display: table-cell;
-
+			
 			img {
 				display: block;
 				margin: 0 auto;

@@ -6,7 +6,26 @@
 .wrap {
   float: none;
   margin: 0 auto;
-  max-width: 1200px;
+
+  @include breakpoint($screen--s) {
+      max-width: 768px;
+  }
+
+  @include breakpoint($screen--m) {
+      max-width: 960px;
+  }
+
+  @include breakpoint($screen--l) {
+      max-width: 1140px;
+  }
+
+  @include breakpoint($screen--l) {
+      max-width: 1140px;
+  }
+
+  @include breakpoint($screen--xl) {
+    max-width: 1200px;
+  }
 }
 
 .wrap {
@@ -15,7 +34,7 @@
   }
 
   &--wide {
-    @media only screen and (min-width: 1280px) {
+    @include breakpoint($screen--l) {
       max-width: 90%;
     }
   }
@@ -31,7 +50,7 @@
   margin-top: 90px;
   position: relative;
   z-index: 9;
-  -word-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .front-page .site-container .site-inner {
