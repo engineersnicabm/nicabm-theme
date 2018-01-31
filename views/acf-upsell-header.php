@@ -31,7 +31,7 @@ if ( ! empty( $inline_style ) ) {
 <div class="wrap"<?php echo $inline_style; ?>>
 	<div class="row offer-page__site-header-row center-xs">
 		<div class="col-xs-12 text-align--center">
-			<p class="offer-page__intro-text"><?php echo esc_html( $lead_in ); ?></p>
+			<h3 class="offer-page__intro-text"><?php echo esc_html( $lead_in ); ?></h3>
 			<h1 class="offer-page__page-heading"><?php echo esc_html( $page_heading ); ?></h1>
 		</div>
 	</div>

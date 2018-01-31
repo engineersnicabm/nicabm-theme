@@ -19,10 +19,6 @@
       max-width: 1140px;
   }
 
-  @include breakpoint($screen--l) {
-      max-width: 1140px;
-  }
-
   @include breakpoint($screen--xl) {
     max-width: 1200px;
   }
@@ -30,7 +26,18 @@
 
 .wrap {
   &--narrow {
-      max-width: 1050px;
+
+      @include breakpoint($screen--m) {
+        max-width: 768px;
+      }
+
+      @include breakpoint($screen--l) {
+        max-width: 960px;
+      }
+
+      @include breakpoint($screen--xl) {
+        max-width: 1050px;
+      }
   }
 
   &--wide {
