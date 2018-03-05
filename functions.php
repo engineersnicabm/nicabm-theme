@@ -25,6 +25,7 @@ define( 'NICABM_THEME_VIEWS_DIR', __DIR__ . '/views' );
 require __DIR__ . '/vendor/autoload.php';
 
 // Extend the theme's functions.php file.
+require_once __DIR__ . '/lib/header.php';
 require_once __DIR__ . '/lib/helpers.php';
 require_once __DIR__ . '/lib/enqueue.php';
 require_once __DIR__ . '/lib/footer.php';
@@ -71,8 +72,8 @@ function aspire_woocommerce_styles( $enqueue_styles ) {
 }
 
 // Change number or products per row to 4
-add_filter('loop_shop_columns', 'loop_columns');
-if (!function_exists('loop_columns')) {
+add_filter( 'loop_shop_columns', 'loop_columns' );
+if ( ! function_exists( 'loop_columns' ) ) {
 	function loop_columns() {
 		return 4; // 4 products per row
 	}
@@ -94,12 +95,19 @@ add_theme_support( 'genesis-responsive-viewport' );
 
 //* Add support for custom header
 add_theme_support( 'custom-header', array(
-	'flex-height'     => true,
-	'width'           => 300,
-	'height'          => 60,
-	'header-selector' => '.site-title a',
-	'header-text'     => false,
+	'width'       => 430,
+	'height'      => 40,
+	'flex-height' => true,
+	'flex-width'  => true,
+	'header-text' => false,
 ) );
+
+
+add_filter('upload_mimes', 'cc_mime_types');
+function cc_mime_types($mimes) {
+	$mimes['svg'] = 'image/svg+xml';
+	return $mimes;
+}
 
 //* Add support for structural wraps
 add_theme_support( 'genesis-structural-wraps', array(
@@ -114,10 +122,10 @@ add_theme_support( 'genesis-structural-wraps', array(
 add_theme_support( 'genesis-after-entry-widget-area' );
 
 //* Add new image sizes
-add_image_size( 'featured-content-lg', 1200, 600, TRUE );
-add_image_size( 'featured-content-sm', 600, 400, TRUE );
-add_image_size( 'featured-content-th', 600, 600, TRUE );
-add_image_size( 'portfolio-thumbnail', 348, 240, TRUE );
+add_image_size( 'featured-content-lg', 1200, 600, true );
+add_image_size( 'featured-content-sm', 600, 400, true );
+add_image_size( 'featured-content-th', 600, 600, true );
+add_image_size( 'portfolio-thumbnail', 348, 240, true );
 
 //* Unregister layout settings
 genesis_unregister_layout( 'content-sidebar-sidebar' );
@@ -165,7 +173,10 @@ function aspire_featured_photo() {
 add_theme_support( 'genesis-footer-widgets', 3 );
 
 //* Add support for footer menu
-add_theme_support ( 'genesis-menus' , array ( 'primary' => 'Primary Navigation Menu', 'footer' => 'Footer Navigation Menu' ) );
+add_theme_support( 'genesis-menus', array(
+	'primary' => 'Primary Navigation Menu',
+	'footer'  => 'Footer Navigation Menu'
+) );
 
 //* Hook menu in footer
 add_action( 'genesis_footer', 'aspire_footer_menu', 7 );
@@ -189,16 +200,16 @@ add_action( 'admin_menu', 'aspire_theme_settings_init', 15 );
  * on the theme settings page only, and not the rest of the admin
  */
 function aspire_theme_settings_init() {
-    global $_genesis_admin_settings;
+	global $_genesis_admin_settings;
 
-    add_action( 'load-' . $_genesis_admin_settings->pagehook, 'aspire_add_portfolio_settings_box', 20 );
+	add_action( 'load-' . $_genesis_admin_settings->pagehook, 'aspire_add_portfolio_settings_box', 20 );
 }
 
 // Add Portfolio Settings box to Genesis Theme Settings
 function aspire_add_portfolio_settings_box() {
-    global $_genesis_admin_settings;
+	global $_genesis_admin_settings;
 
-    add_meta_box( 'genesis-theme-settings-aspire-portfolio', __( 'Portfolio Page Settings', 'aspire' ), 'aspire_theme_settings_portfolio',     $_genesis_admin_settings->pagehook, 'main' );
+	add_meta_box( 'genesis-theme-settings-aspire-portfolio', __( 'Portfolio Page Settings', 'aspire' ), 'aspire_theme_settings_portfolio', $_genesis_admin_settings->pagehook, 'main' );
 }
 
 /**
@@ -206,32 +217,49 @@ function aspire_add_portfolio_settings_box() {
  */
 function aspire_theme_settings_portfolio() { ?>
 
-	<p><?php _e("Display which category:", 'genesis'); ?>
-	<?php wp_dropdown_categories(array('selected' => genesis_get_option('aspire_portfolio_cat'), 'name' => GENESIS_SETTINGS_FIELD.'[aspire_portfolio_cat]', 'orderby' => 'Name' , 'hierarchical' => 1, 'show_option_all' => __("All Categories", 'genesis'), 'hide_empty' => '0' )); ?></p>
+	<p><?php _e( "Display which category:", 'genesis' ); ?>
+		<?php wp_dropdown_categories( array(
+			'selected'        => genesis_get_option( 'aspire_portfolio_cat' ),
+			'name'            => GENESIS_SETTINGS_FIELD . '[aspire_portfolio_cat]',
+			'orderby'         => 'Name',
+			'hierarchical'    => 1,
+			'show_option_all' => __( "All Categories", 'genesis' ),
+			'hide_empty'      => '0'
+		) ); ?></p>
 
-	<p><?php _e("Exclude the following Category IDs:", 'genesis'); ?><br />
-	<input type="text" name="<?php echo GENESIS_SETTINGS_FIELD; ?>[aspire_portfolio_cat_exclude]" value="<?php echo esc_attr( genesis_get_option('aspire_portfolio_cat_exclude') ); ?>" size="40" /><br />
-	<small><strong><?php _e("Comma separated - 1,2,3 for example", 'genesis'); ?></strong></small></p>
+	<p><?php _e( "Exclude the following Category IDs:", 'genesis' ); ?><br/>
+		<input type="text" name="<?php echo GENESIS_SETTINGS_FIELD; ?>[aspire_portfolio_cat_exclude]" value="<?php echo esc_attr( genesis_get_option( 'aspire_portfolio_cat_exclude' ) ); ?>" size="40"/><br/>
+		<small><strong><?php _e( "Comma separated - 1,2,3 for example", 'genesis' ); ?></strong></small>
+	</p>
 
-	<p><?php _e('Number of Posts to Show', 'genesis'); ?>:
-	<input type="text" name="<?php echo GENESIS_SETTINGS_FIELD; ?>[aspire_portfolio_cat_num]" value="<?php echo esc_attr( genesis_option('aspire_portfolio_cat_num') ); ?>" size="2" /></p>
+	<p><?php _e( 'Number of Posts to Show', 'genesis' ); ?>:
+		<input type="text" name="<?php echo GENESIS_SETTINGS_FIELD; ?>[aspire_portfolio_cat_num]" value="<?php echo esc_attr( genesis_option( 'aspire_portfolio_cat_num' ) ); ?>" size="2"/>
+	</p>
 
-	<p><span class="description"><?php _e('<b>NOTE:</b> The Portfolio Page displays the "Portfolio Page" image size plus the excerpt or full content as selected below.', 'aspire'); ?></span></p>
+	<p>
+		<span class="description"><?php _e( '<b>NOTE:</b> The Portfolio Page displays the "Portfolio Page" image size plus the excerpt or full content as selected below.', 'aspire' ); ?></span>
+	</p>
 
-	<p><?php _e("Select one of the following:", 'genesis'); ?>
-	<select name="<?php echo GENESIS_SETTINGS_FIELD; ?>[aspire_portfolio_content]">
-		<option style="padding-right:10px;" value="full" <?php selected('full', genesis_get_option('aspire_portfolio_content')); ?>><?php _e("Display post content", 'genesis'); ?></option>
-		<option style="padding-right:10px;" value="excerpts" <?php selected('excerpts', genesis_get_option('aspire_portfolio_content')); ?>><?php _e("Display post excerpts", 'genesis'); ?></option>
-	</select></p>
+	<p><?php _e( "Select one of the following:", 'genesis' ); ?>
+		<select name="<?php echo GENESIS_SETTINGS_FIELD; ?>[aspire_portfolio_content]">
+			<option style="padding-right:10px;" value="full" <?php selected( 'full', genesis_get_option( 'aspire_portfolio_content' ) ); ?>><?php _e( "Display post content", 'genesis' ); ?></option>
+			<option style="padding-right:10px;" value="excerpts" <?php selected( 'excerpts', genesis_get_option( 'aspire_portfolio_content' ) ); ?>><?php _e( "Display post excerpts", 'genesis' ); ?></option>
+		</select></p>
 
-	<p><label for="<?php echo GENESIS_SETTINGS_FIELD; ?>[aspire_portfolio_content_archive_limit]"><?php _e('Limit content to', 'genesis'); ?></label> <input type="text" name="<?php echo GENESIS_SETTINGS_FIELD; ?>[aspire_portfolio_content_archive_limit]" id="<?php echo GENESIS_SETTINGS_FIELD; ?>[aspire_portfolio_content_archive_limit]" value="<?php echo esc_attr( genesis_option('aspire_portfolio_content_archive_limit') ); ?>" size="3" /> <label for="<?php echo GENESIS_SETTINGS_FIELD; ?>[aspire_portfolio_content_archive_limit]"><?php _e('characters', 'genesis'); ?></label></p>
+	<p>
+		<label for="<?php echo GENESIS_SETTINGS_FIELD; ?>[aspire_portfolio_content_archive_limit]"><?php _e( 'Limit content to', 'genesis' ); ?></label>
+		<input type="text" name="<?php echo GENESIS_SETTINGS_FIELD; ?>[aspire_portfolio_content_archive_limit]" id="<?php echo GENESIS_SETTINGS_FIELD; ?>[aspire_portfolio_content_archive_limit]" value="<?php echo esc_attr( genesis_option( 'aspire_portfolio_content_archive_limit' ) ); ?>" size="3"/>
+		<label for="<?php echo GENESIS_SETTINGS_FIELD; ?>[aspire_portfolio_content_archive_limit]"><?php _e( 'characters', 'genesis' ); ?></label>
+	</p>
 
-	<p><span class="description"><?php _e('<b>NOTE:</b> Using this option will limit the text and strip all formatting from the text displayed. To use this option, choose "Display post content" in the select box above.', 'genesis'); ?></span></p>
-<?php
+	<p>
+		<span class="description"><?php _e( '<b>NOTE:</b> Using this option will limit the text and strip all formatting from the text displayed. To use this option, choose "Display post content" in the select box above.', 'genesis' ); ?></span>
+	</p>
+	<?php
 }
 
 // Enable shortcodes in widgets
-add_filter('widget_text', 'do_shortcode');
+add_filter( 'widget_text', 'do_shortcode' );
 
 //* Register widget areas
 genesis_register_sidebar( array(

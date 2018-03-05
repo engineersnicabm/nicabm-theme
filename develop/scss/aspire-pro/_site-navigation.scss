@@ -13,24 +13,20 @@
 }
 
 .genesis-nav-menu a {
-  color: #fff;
+  color: $black-alt;
   display: block;
-  font-size: 13px;
+  font-size: 1.5rem;
   font-weight: 300;
   letter-spacing: 2px;
-  padding: 30px 15px;
+  padding: 10px 15px;
   text-decoration: none;
   text-transform: uppercase;
 }
 
 .genesis-nav-menu a:focus,
-.genesis-nav-menu a:hover {
-  color: #fa5738;
-  text-decoration: underline;
-}
-
-.site-header.light .genesis-nav-menu a {
-  /*padding: 30px 15px;*/
+.genesis-nav-menu a:hover,
+.genesis-nav-menu li.current-menu-item > a {
+  color: $red;
 }
 
 .site-header.light .genesis-nav-menu > .last > a {
@@ -95,7 +91,7 @@
 
 .genesis-nav-menu .sub-menu a:hover,
 .genesis-nav-menu .sub-menu li.current-menu-item > a {
-  background-color: #fa5738;
+  background-color: $red;
   color: #fff;
 }
 

@@ -23,10 +23,6 @@
     width: 300px;
   }
 
-  .title-area {
-    width: 200px;
-  }
-
 }
 
 @media only screen and (max-width: 1080px) {
@@ -68,8 +64,7 @@
 
   .content,
   .sidebar,
-  .site-header .widget-area,
-  .title-area {
+  .site-header .widget-area {
     width: 100%;
   }
 
@@ -197,8 +192,7 @@
   .sidebar-secondary,
   .sidebar-sidebar-content .content,
   .sidebar-sidebar-content .content-sidebar-wrap,
-  .site-header .widget-area,
-  .title-area {
+  .site-header .widget-area {
     width: 100%;
   }
 

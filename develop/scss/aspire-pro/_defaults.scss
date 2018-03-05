@@ -341,7 +341,7 @@ input:focus[type="submit"],
 .footer-widgets input[type="reset"],
 .footer-widgets input[type="submit"],
 .footer-widgets .button {
-	background-color: #fa5738;
+	background-color: $red;
 	color: #fff;
 }
 
@@ -406,7 +406,7 @@ a.button.clear-button {
 }
 
 a.button.clear-button:hover {
-	border: 1px solid #fa5738;
+	border: 1px solid $red;
 }
 
 a.button.black {

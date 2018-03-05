@@ -1,6 +1,6 @@
 
 .site-header {
-  background-color: #000;
+  background-color: #fff;
   left: 0;
   position: sticky;
   top: 0;
@@ -18,8 +18,13 @@
 
   .wrap {
     max-width: none;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding: 1.6rem;
+
+    @include breakpoint($screen--s) {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+    }
   }
 }
 
@@ -34,8 +39,7 @@
 }
 
 .site-header.light {
-  background-color: #000;
-  padding-top: 0;
+  border-bottom: 1px solid #D4D4D4;
 }
 
 .site-header.light .nav-secondary {
@@ -49,10 +53,10 @@
 /* Title Area
 --------------------------------------------- */
 
-.title-area {
-  float: left;
-  padding: 25px 0;
-  width: 360px;
+@include breakpoint($screen--s) {
+  .title-area {
+    margin-right: auto;
+  }
 }
 
 .site-header.light .title-area {
@@ -87,13 +91,6 @@
 .header-image .title-area,
 .header-image .site-header.light .title-area {
   padding: 0;
-}
-
-.header-image .site-title > a {
-  background-size: contain !important;
-  display: block;
-  height: 76px;
-  text-indent: -9999px;
 }
 
 .header-image .light .site-title > a {

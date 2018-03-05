@@ -29,7 +29,7 @@
 
 .image-section a:hover,
 .image-section .featured-content .entry-title a:hover {
-  color: #fa5738;
+  color: $red;
 }
 
 .image-section a.button:hover {
@@ -100,7 +100,7 @@
 }
 
 .front-page-2 .image-section {
-  background: #fa5738;
+  background: $red;
   padding: 60px 0 20px;
 }
 
@@ -175,7 +175,7 @@
 }
 
 .front-page-9 {
-  background-color: #fa5738;
+  background-color: $red;
 }
 
 .front-page-12 {
@@ -187,7 +187,7 @@
 }
 
 .front-page-12 .image-section a {
-  color: #fa5738;
+  color: $red;
 }
 
 .secondary-nav .front-page-1 .image-section {
@@ -448,7 +448,7 @@ p.entry-meta {
 .archive-pagination li a:hover,
 .archive-pagination li a:focus,
 .archive-pagination .active a {
-  background-color: #fa5738;
+  background-color: $red;
   text-decoration: underline;
 }
 
