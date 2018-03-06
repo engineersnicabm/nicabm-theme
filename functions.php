@@ -25,10 +25,12 @@ define( 'NICABM_THEME_VIEWS_DIR', __DIR__ . '/views' );
 require __DIR__ . '/vendor/autoload.php';
 
 // Extend the theme's functions.php file.
-require_once __DIR__ . '/lib/header.php';
-require_once __DIR__ . '/lib/helpers.php';
 require_once __DIR__ . '/lib/enqueue.php';
-require_once __DIR__ . '/lib/footer.php';
+require_once __DIR__ . '/lib/functions/formatting.php';
+require_once __DIR__ . '/lib/helpers.php';
+require_once __DIR__ . '/lib/structure/footer.php';
+require_once __DIR__ . '/lib/structure/header.php';
+require_once __DIR__ . '/lib/structure/post.php';
 
 //* Enqueue Scripts
 add_action( 'wp_enqueue_scripts', 'aspire_enqueue_scripts_styles' );

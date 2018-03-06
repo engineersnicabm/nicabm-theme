@@ -6,13 +6,19 @@
 		padding: 0;
 
 		a:not(.button) {
+			color: $blue-2;
 			text-decoration: underline;
 		}
 
 		a:hover,
 		a:focus {
+			color: $red;
 			text-decoration: none;
 		}
+	}
+
+	.content img {
+		border-radius: 5%;
 	}
 }
 

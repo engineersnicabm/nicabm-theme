@@ -333,12 +333,16 @@
 --------------------------------------------- */
 
 .entry {
-  margin-bottom: 100px;
+  margin-bottom: 8rem;
   padding: 0;
 }
 
 .content .entry {
   /*background-color: #fff;*/
+}
+
+.blog .entry-content {
+  font-size: 1.6rem;
 }
 
 .entry-content ol,
@@ -382,7 +386,7 @@ p.entry-meta {
 }
 
 .entry-header .entry-meta {
-  margin-bottom: 24px;
+  margin-bottom: 1.4rem;
 }
 
 .entry-footer .entry-meta {
@@ -395,10 +399,10 @@ p.entry-meta {
   display: block;
 }
 
-.entry-comments-link::before {
-  content: "\2014";
-  margin: 0 6px 0 2px;
-}
+//.entry-comments-link::before {
+//  content: "\2014";
+//  margin: 0 6px 0 2px;
+//}
 
 /* ## After Entry
 --------------------------------------------- */
