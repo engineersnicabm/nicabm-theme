@@ -11,14 +11,14 @@ html {
 
 /* Chrome fix */
 body > div {
-	font-size: 2.1rem;
+	font-size: 2rem;
 }
 
 body {
 	background-color: #fff;
 	color: $black;
 	font-family: $body-font;
-	font-size: 2.1rem;
+	font-size: 2rem;
 	font-weight: 400;
 	letter-spacing: .05rem;
 	line-height: 1.5;
@@ -45,12 +45,15 @@ a {
 	color: $link;
 	cursor: pointer;
 	text-decoration: none;
+
+	.entry-comments-link & {
+		font-weight: $font-weight-semibold;
+	}
 }
 
 a:hover,
 a:focus {
 	color: $link-hover;
-	text-decoration: underline;
 }
 
 p {
@@ -107,7 +110,7 @@ h6 {
 
 h1 {
 	font-size: 4.8rem;
-	font-weight: 600;
+	font-weight: $font-weight-semibold;
 }
 
 h2 {
@@ -124,7 +127,7 @@ h3 {
 
 h4 {
 	font-size: 2.4rem;
-	font-weight: 600;
+	font-weight: $font-weight-semibold;
 	letter-spacing: 0.05rem;
 }
 
@@ -255,15 +258,15 @@ img {
 /* ## Forms
 --------------------------------------------- */
 
-input,
+input:not([type="submit"]),
 select,
 textarea {
 	background-color: #fff;
 	border: 1px solid #ddd;
 	color: $black;
-	font-size: 18px;
 	font-size: 1.8rem;
 	font-weight: 300;
+	letter-spacing: 0.05rem;
 	padding: 16px;
 	width: 100%;
 }
@@ -297,16 +300,15 @@ input[type="reset"],
 input[type="submit"],
 .button {
 	background-color: $red;
-	border-radius: 0.3rem;
 	border: 0.5rem solid $red;
 	color: #fff;
 	cursor: pointer;
 	font-family: $heading-a;
-	font-size: 2.2rem;
-	font-weight: 600;
-	letter-spacing: 0.2rem;
-	margin: 2rem 0;
-	padding: 2rem 7rem;
+	font-size: 1.8rem;
+	font-weight: $font-weight-semibold;
+	letter-spacing: 0.25rem;
+	margin: 1rem 0;
+	padding: 1rem 2rem;
 	text-decoration: none;
 	text-transform: uppercase;
 }
@@ -486,6 +488,7 @@ th {
 }
 
 .more-link {
+	font-weight: $font-weight-semibold;
 	position: relative;
 }
 

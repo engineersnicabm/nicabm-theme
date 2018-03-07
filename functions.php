@@ -28,6 +28,7 @@ require __DIR__ . '/vendor/autoload.php';
 require_once __DIR__ . '/lib/enqueue.php';
 require_once __DIR__ . '/lib/functions/formatting.php';
 require_once __DIR__ . '/lib/helpers.php';
+require_once __DIR__ . '/lib/structure/comments.php';
 require_once __DIR__ . '/lib/structure/footer.php';
 require_once __DIR__ . '/lib/structure/header.php';
 require_once __DIR__ . '/lib/structure/post.php';
@@ -124,10 +125,8 @@ add_theme_support( 'genesis-structural-wraps', array(
 add_theme_support( 'genesis-after-entry-widget-area' );
 
 //* Add new image sizes
-add_image_size( 'featured-content-lg', 1200, 600, true );
-add_image_size( 'featured-content-sm', 600, 400, true );
-add_image_size( 'featured-content-th', 600, 600, true );
 add_image_size( 'portfolio-thumbnail', 348, 240, true );
+add_image_size( 'blog-horizontal-large', 700, 285, true );
 
 //* Unregister layout settings
 genesis_unregister_layout( 'content-sidebar-sidebar' );

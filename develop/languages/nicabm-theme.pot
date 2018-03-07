@@ -28,3 +28,48 @@ msgstr ""
 #: templates/upsell-page.php:3
 msgid "NICABM Upsell Page"
 msgstr ""
+
+#: lib/structure/comments.php:28
+msgid "Please type your comment here &hellip;"
+msgstr ""
+
+#: lib/structure/comments.php:29
+msgctxt "noun"
+msgid "Comment"
+msgstr ""
+
+#: lib/structure/comments.php:35
+msgid "Enter Your Name *"
+msgstr ""
+
+#: lib/structure/comments.php:40
+msgid "Enter Your Email Address *"
+msgstr ""
+
+#: lib/structure/comments.php:45
+msgid "Please Leave A Comment"
+msgstr ""
+
+#: lib/structure/comments.php:64
+msgid "% Comments"
+msgstr ""
+
+#: lib/structure/comments.php:65
+msgid "1 Comment"
+msgstr ""
+
+#: lib/structure/comments.php:66
+msgid "Leave a Comment"
+msgstr ""
+
+#: lib/structure/post.php:23
+msgid "Portfolio Thumbnail"
+msgstr ""
+
+#: lib/structure/post.php:24
+msgid "Blog Horizontal - Large"
+msgstr ""
+
+#: lib/structure/post.php:77
+msgid "Related Posts: "
+msgstr ""

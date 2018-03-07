@@ -397,6 +397,7 @@ p.entry-meta {
 .entry-categories,
 .entry-tags {
   display: block;
+  font-style: italic;
 }
 
 //.entry-comments-link::before {
@@ -435,17 +436,12 @@ p.entry-meta {
 }
 
 .archive-pagination li a {
-  border-radius: 6px;
-  -moz-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  background-color: $black;
+  background-color: #999999;
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-size: 16px;
   font-size: 1.6rem;
-  padding: 4px 12px;
+  padding: 1rem 1.6rem;
   text-decoration: none;
 }
 
@@ -453,7 +449,7 @@ p.entry-meta {
 .archive-pagination li a:focus,
 .archive-pagination .active a {
   background-color: $red;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 /* ## Comments
@@ -466,18 +462,18 @@ p.entry-meta {
   margin-bottom: 40px;
 }
 
-.comment-respond,
-.entry-pings {
-  padding: 40px 40px 16px;
-}
+//.comment-respond,
+//.entry-pings {
+//  padding: 40px 40px 16px;
+//}
 
 .entry-comments {
   padding: 40px 0;
 }
 
 .comment-header {
-  font-size: 16px;
-  font-size: 1.6rem;
+  font-size: 2.2rem;
+  font-weight: $font-weight-semibold;
 }
 
 li.comment { }
@@ -488,27 +484,36 @@ li.comment { }
 }
 
 .comment-list li {
-  margin-top: 24px;
-  padding: 32px;
+  border-bottom: 2px solid #e5e5e5;
+  margin: 2rem auto;
+  padding: 2rem 1rem;
+
+  li {
+    border-bottom: none;
+    margin-left: 6rem;
+    margin-right: -1rem;
+  }
 }
 
-.comment-list li li {
-  margin-right: -32px;
-}
+.comment-respond {
+  input:not([type="submit"]),
+  textarea {
+    background-color: #F0F0F0;
+  }
 
-.comment-respond input[type="email"],
-.comment-respond input[type="text"],
-.comment-respond input[type="url"] {
-  width: 50%;
-}
+  ::placeholder {
+    color: #545454;
+  }
 
-.comment-respond label {
-  display: block;
-  margin-right: 12px;
+  label {
+    display: block;
+    margin-right: 12px;
+  }
 }
 
 .entry-comments .comment-author {
   margin-bottom: 0;
+  padding-top: 2.5rem;
 }
 
 .entry-pings .reply {

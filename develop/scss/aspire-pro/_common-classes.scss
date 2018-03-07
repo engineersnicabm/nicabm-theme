@@ -30,10 +30,9 @@
 
 .comment .avatar {
   border-radius: 99%;
-  margin: 0 16px 24px 0;
-  -moz-border-radius: 99%;
-  -ms-border-radius: 99%;
-  -webkit-border-radius: 99%;
+  margin: 0 16px 0 0;
+  position: relative;
+  top: -2.5rem;
 }
 
 /* ## Genesis
@@ -112,7 +111,7 @@
 .entry-title a,
 .sidebar .widget-title a {
   color: $black;
-  font-weight: 600;
+  font-weight: $font-weight-semibold;
   text-decoration: none;
 }
 
@@ -125,7 +124,7 @@
 .sidebar .widget-title,
 .sidebar h4 {
   font-size: 1.8rem;
-  font-weight: 600;
+  font-weight: $font-weight-semibold;
   letter-spacing: .25rem;
   line-height: 1.4;
   margin-bottom: 2rem;
