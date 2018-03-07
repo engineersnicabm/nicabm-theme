@@ -6,11 +6,7 @@
   top: 0;
   width: 100%;
   z-index: 999;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition:    all 0.2s ease-in-out;
-  -ms-transition:     all 0.2s ease-in-out;
-  -o-transition:      all 0.2s ease-in-out;
-  transition:         all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 
   &--static {
     position: static;
@@ -20,7 +16,7 @@
     max-width: none;
     padding: 1.6rem;
 
-    @include breakpoint($screen--s) {
+    @include breakpoint($screen--m) {
       align-items: center;
       display: flex;
       justify-content: space-between;
@@ -103,8 +99,14 @@
 --------------------------------------------- */
 
 .site-header .widget-area {
-  float: right;
-  text-align: right;
-  width: 800px;
+  @include breakpoint($screen--m) {
+    width: 620px;
+  }
+
+  @include breakpoint($screen--l){
+    float: right;
+    text-align: right;
+    width: 800px;
+  }
 }
 

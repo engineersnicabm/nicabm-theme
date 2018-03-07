@@ -83,35 +83,61 @@
 .content-sidebar-sidebar .content-sidebar-wrap,
 .sidebar-content-sidebar .content-sidebar-wrap,
 .sidebar-sidebar-content .content-sidebar-wrap {
-  width: 980px;
+
+  @include breakpoint($screen--m) {
+    width: 740px;
+  }
+
+  @include breakpoint($screen--l){
+    width: 980px;
+  }
 }
 
 .content-sidebar-sidebar .content-sidebar-wrap {
-  float: left;
+  @include breakpoint($screen--m) {
+    float: left;
+  }
 }
 
 .sidebar-content-sidebar .content-sidebar-wrap,
 .sidebar-sidebar-content .content-sidebar-wrap {
-  float: right;
+  @include breakpoint($screen--m) {
+    float: right;
+  }
 }
 
 /* ### Content */
 
 .content {
-  float: right;
-  width: 700px;
+  @include breakpoint($screen--m) {
+    float: right;
+    width: 700px;
+  }
 }
 
 .content-sidebar .content,
 .content-sidebar-sidebar .content,
 .sidebar-content-sidebar .content {
-  float: left;
+  @include breakpoint($screen--m) {
+    width: 620px;
+    float: left;
+  }
+
+  @include breakpoint($screen--l) {
+    width: 700px;
+  }
 }
 
 .content-sidebar-sidebar .content,
 .sidebar-content-sidebar .content,
 .sidebar-sidebar-content .content {
-  width: 580px;
+  @include breakpoint($screen--m) {
+    width: 400px;
+  }
+
+  @include breakpoint($screen--l) {
+    width: 580px;
+  }
 }
 
 .full-width-content .content {
@@ -121,24 +147,37 @@
 /* ### Primary Sidebar */
 
 .sidebar-primary {
-  float: right;
-  width: 360px;
+
+  @include breakpoint($screen--m) {
+    float: right;
+    width: 300px;
+  }
+
+  @include breakpoint($screen--xl) {
+    width: 360px;
+  }
 }
 
 .sidebar-content .sidebar-primary,
 .sidebar-sidebar-content .sidebar-primary {
-  float: left;
+  @include breakpoint($screen--m) {
+    float: left;
+  }
 }
 
 /* ### Secondary Sidebar */
 
 .sidebar-secondary {
-  float: left;
-  width: 180px;
+  @include breakpoint($screen--m) {
+    float: left;
+    width: 180px;
+  }
 }
 
 .content-sidebar-sidebar .sidebar-secondary {
-  float: right;
+  @include breakpoint($screen--m) {
+    float: right;
+  }
 }
 
 /* ## Column Classes
@@ -156,45 +195,65 @@
 .two-fourths,
 .two-sixths,
 .two-thirds {
-  float: left;
-  margin-bottom: 40px;
-  margin-left: 2.564102564102564%;
+  margin: 0 0 40px;
+
+  @include breakpoint($screen--m) {
+    float: left;
+    margin-bottom: 40px;
+    margin-left: 2.564102564102564%;
+  }
 }
 
 .one-half,
 .three-sixths,
 .two-fourths {
-  width: 48.717948717948715%;
+  @include breakpoint($screen--m) {
+    width: 48.717948717948715%;
+  }
 }
 
 .one-third,
 .two-sixths {
-  width: 31.623931623931625%;
+  @include breakpoint($screen--m) {
+    width: 31.623931623931625%;
+  }
 }
 
 .four-sixths,
 .two-thirds {
-  width: 65.81196581196582%;
+  @include breakpoint($screen--m) {
+    width: 65.81196581196582%;
+  }
 }
 
 .one-fourth {
-  width: 23.076923076923077%;
+  @include breakpoint($screen--m) {
+    width: 23.076923076923077%;
+  }
 }
 
 .three-fourths {
-  width: 74.35897435897436%;
+  @include breakpoint($screen--m) {
+    width: 74.35897435897436%;
+  }
 }
 
 .one-sixth {
-  width: 14.52991452991453%;
+  @include breakpoint($screen--m) {
+    width: 14.52991452991453%;
+  }
 }
 
 .five-sixths {
-  width: 82.90598290598291%;
+  @include breakpoint($screen--m) {
+    width: 82.90598290598291%;
+  }
 }
 
 .first {
-  clear: both;
-  margin-left: 0;
+  @include breakpoint($screen--m) {
+    clear: both;
+    margin-left: 0;
+  }
 }
 
