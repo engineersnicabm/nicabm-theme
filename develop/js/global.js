@@ -1,9 +1,27 @@
 jQuery(function( $ ){
+    'use strict'
+
+    var addHeaderScrollClass,
+	    $siteHeader;
+
+    $siteHeader = $('header.site-header');
+
+    addHeaderScrollClass = function () {
+        if ($(this).scrollTop() > 20 ) {
+            $siteHeader.addClass('scroll');
+        }
+        else {
+            $siteHeader.removeClass('scroll');
+        }
+    };
+
+    $(window).ready(addHeaderScrollClass);
+    $(window).on('scroll', addHeaderScrollClass);
 
     $(document).ready(function(){
         $('a[href^="#"]').on('click',function (e) {
             e.preventDefault();
-
+            
             var target = this.hash;
             var $target = $(target);
 
@@ -12,23 +30,6 @@ jQuery(function( $ ){
             }, 900, 'swing');
         });
     });
-
-	if( $( document ).scrollTop() > 0 ){
-		$( '.site-header' ).addClass( 'light' );
-	}
-
-	// Add opacity class to site header
-	$( document ).on('scroll', function(){
-
-		if ( $( document ).scrollTop() > 0 ){
-			$( '.site-header' ).addClass( 'light' );
-
-		} else {
-			$( '.site-header' ).removeClass( 'light' );
-		}
-
-	});
-
 
 	$( '.nav-primary .genesis-nav-menu, .nav-secondary .genesis-nav-menu' ).addClass( 'responsive-menu' ).before('<div class="responsive-menu-icon"></div>');
 

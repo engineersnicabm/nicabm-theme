@@ -27,7 +27,7 @@
 
   .front-page .site-header,
   .header-image .title-area,
-  .header-image .site-header.light .title-area {
+  .header-image .site-header.scroll .title-area {
     padding-top: 0;
   }
 
@@ -42,11 +42,11 @@
   //}
 
   .site-header .title-area,
-  .site-header.light .title-area {
+  .site-header.scroll .title-area {
     padding: 15px 0;
   }
 
-  .header-image .light .site-title > a {
+  .header-image .scroll .site-title > a {
     height: 76px;
   }
 
@@ -65,13 +65,13 @@
   //}
 
   .nav-secondary,
-  .site-header.light .nav-secondary {
+  .site-header.scroll .nav-secondary {
     border-bottom: none;
     display: block;
   }
 
   .genesis-nav-menu a,
-  .site-header.light .genesis-nav-menu a {
+  .site-header.scroll .genesis-nav-menu a {
     padding: 10px 10px 20px;
   }
 
