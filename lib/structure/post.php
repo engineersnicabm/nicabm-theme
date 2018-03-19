@@ -27,7 +27,7 @@ function extend_image_size_choices( $sizes ) {
 	return array_merge( (array) $sizes, $add_sizes );
 }
 
-add_action( 'genesis_entry_content', __NAMESPACE__ . '\\do_post_featured_image', 8 );
+//add_action( 'genesis_entry_content', __NAMESPACE__ . '\\do_post_featured_image', 8 );
 /**
  * Render the featured image at the top of the post.
  */
