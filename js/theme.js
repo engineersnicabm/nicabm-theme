@@ -43,7 +43,7 @@
 
 })(jQuery);
 jQuery(function( $ ){
-    'use strict'
+    'use strict';
 
     var addHeaderScrollClass,
         $scrollPos,
