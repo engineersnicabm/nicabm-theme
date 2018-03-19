@@ -499,6 +499,10 @@ p.entry-meta {
 	input:not([type="submit"]),
 	textarea {
 		background-color: #F0F0F0;
+
+		&:not(:focus) {
+			border-color: #F0F0F0;
+		}
 	}
 
 	::placeholder {

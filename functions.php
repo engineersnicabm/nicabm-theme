@@ -32,6 +32,7 @@ require_once __DIR__ . '/lib/structure/comments.php';
 require_once __DIR__ . '/lib/structure/footer.php';
 require_once __DIR__ . '/lib/structure/header.php';
 require_once __DIR__ . '/lib/structure/post.php';
+require_once __DIR__ . '/lib/structure/search.php';
 
 //* Enqueue Scripts
 add_action( 'wp_enqueue_scripts', 'aspire_enqueue_scripts_styles' );

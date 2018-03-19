@@ -271,6 +271,15 @@ textarea {
 	width: 100%;
 }
 
+input[type="search"] {
+	background: url( 'images/search-icon.svg' ) no-repeat 10px center;
+	color: $black-alt;
+	font-size: 1.3rem;
+	letter-spacing: 0.15rem;
+	padding-left: 40px;
+	text-transform: uppercase;
+}
+
 input:focus,
 textarea:focus {
 	border: 1px solid #999;
