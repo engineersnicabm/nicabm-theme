@@ -126,7 +126,7 @@ add_theme_support( 'genesis-structural-wraps', array(
 add_theme_support( 'genesis-after-entry-widget-area' );
 
 //* Add new image sizes
-add_image_size( 'portfolio-thumbnail', 348, 240, true );
+add_image_size( 'portfolio-thumbnail', 340, 240, true );
 add_image_size( 'blog-horizontal-large', 700, 285, true );
 
 //* Unregister layout settings
