@@ -2,15 +2,17 @@ jQuery(function( $ ){
     'use strict'
 
     var addHeaderScrollClass,
-	    $siteHeader;
-
-    $siteHeader = $('header.site-header');
+        $scrollPos,
+	    $siteHeader = $('header.site-header');
 
     addHeaderScrollClass = function () {
-        if ($(this).scrollTop() > 20 ) {
+        $scrollPos = $(window).scrollTop();
+
+        if ( $scrollPos > 40 ) {
             $siteHeader.addClass('scroll');
         }
-        else {
+        // This conditional is required to fix jittery header in Chrome.
+        else if ( $scrollPos < 10 ) {
             $siteHeader.removeClass('scroll');
         }
     };
@@ -21,7 +23,7 @@ jQuery(function( $ ){
     $(document).ready(function(){
         $('a[href^="#"]').on('click',function (e) {
             e.preventDefault();
-            
+
             var target = this.hash;
             var $target = $(target);
 
