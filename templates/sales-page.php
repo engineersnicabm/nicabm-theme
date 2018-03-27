@@ -14,6 +14,9 @@ namespace NICABM\ChildTheme;
 
 use function NICABM\Utility\get_acf_json_dir;
 
+// Force full width.
+add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
+
 $nicabm_sale_redirect = get_sales_page_post_meta( 'nicabm_sale_redirect' );
 
 $redirect_start_time = strtotime( $nicabm_sale_redirect['redirect_time'] );
