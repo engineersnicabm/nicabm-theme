@@ -18,11 +18,11 @@
   }
 
   .site-header {
-    position: static;
+    position: relative;
   }
 
   .front-page .site-header {
-    background-color: #000;
+    background-color: #fff;
   }
 
   .front-page .site-header,
@@ -77,11 +77,6 @@
 
   .front-page .site-inner {
     margin-top: 0;
-  }
-
-
-  .site-inner {
-    margin-top: 80px;
   }
 
   .full-width-content .content {
@@ -285,15 +280,15 @@
     background: none;
   }
 
-  .site-header .genesis-nav-menu.responsive-menu .current-menu-item > a,
-  .site-header .genesis-nav-menu.responsive-menu .sub-menu li a,
-  .site-header .genesis-nav-menu.responsive-menu .sub-menu li a:hover,
-  .site-header .genesis-nav-menu.responsive-menu .sub-menu,
-  .site-header .genesis-nav-menu.responsive-menu > .menu-item-has-children:before,
-  .site-header .genesis-nav-menu.responsive-menu > li:hover > a,
-  .site-header .genesis-nav-menu.responsive-menu a:hover {
-    color: #fff;
-  }
+  //.site-header .genesis-nav-menu.responsive-menu .current-menu-item > a,
+  //.site-header .genesis-nav-menu.responsive-menu .sub-menu li a,
+  //.site-header .genesis-nav-menu.responsive-menu .sub-menu li a:hover,
+  //.site-header .genesis-nav-menu.responsive-menu .sub-menu,
+  //.site-header .genesis-nav-menu.responsive-menu > .menu-item-has-children:before,
+  //.site-header .genesis-nav-menu.responsive-menu > li:hover > a,
+  //.site-header .genesis-nav-menu.responsive-menu a:hover {
+  //  color: #fff;
+  //}
 
   .archive-description,
   .author-box,

@@ -332,7 +332,11 @@
 --------------------------------------------- */
 
 .entry {
-	margin-bottom: 8rem;
+	@include breakpoint($screen--m) {
+		margin-bottom: 8rem;
+	}
+
+	margin-bottom: 5rem;
 	padding: 0;
 }
 
@@ -378,13 +382,16 @@
 --------------------------------------------- */
 
 p.entry-meta {
-	font-size: 16px;
 	font-size: 1.6rem;
 	margin-bottom: 0;
 }
 
 .entry-header .entry-meta {
 	margin-bottom: 1.4rem;
+
+	.single & {
+		margin-bottom: 3.5rem;
+	}
 }
 
 .entry-footer .entry-meta {
@@ -470,7 +477,7 @@ p.entry-meta {
 }
 
 .comment-header {
-	font-size: 2.2rem;
+	font-size: 2rem;
 	font-weight: $font-weight-semibold;
 }
 
@@ -481,6 +488,7 @@ p.entry-meta {
 
 .comment-list li {
 	border-bottom: 2px solid #e5e5e5;
+	font-size: 1.8rem;
 	margin: 2rem auto;
 	padding: 2rem 1rem;
 
@@ -505,6 +513,11 @@ p.entry-meta {
 		}
 	}
 
+	input[type="submit"] {
+		border-width: 0.3rem;
+		font-size: 1.5rem;
+	}
+
 	::placeholder {
 		color: #545454;
 	}
@@ -516,8 +529,14 @@ p.entry-meta {
 }
 
 .entry-comments .comment-author {
-	margin-bottom: 0;
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
 	padding-top: 2.5rem;
+
+	span.says {
+		margin-left: 0.6rem;
+	}
 }
 
 .entry-pings .reply {

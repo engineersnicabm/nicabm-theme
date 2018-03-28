@@ -31,8 +31,6 @@
 .comment .avatar {
   border-radius: 99%;
   margin: 0 16px 0 0;
-  position: relative;
-  top: -2.5rem;
 }
 
 /* ## Genesis
@@ -103,13 +101,14 @@
 }
 
 .entry-title {
-  font-size: 3.2rem;
+  font-size: 3.6rem;
   margin-bottom: 10px;
 }
 
 .entry-title a,
 .sidebar .widget-title a {
   color: $black;
+  font-size: 3.2rem;
   font-weight: $font-weight-semibold;
   text-decoration: none;
 }
