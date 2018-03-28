@@ -66,6 +66,17 @@ function remove_entry_footer_post_info() {
 	remove_action( 'genesis_entry_footer', 'genesis_entry_footer_markup_close', 15 );
 }
 
+add_filter( 'genesis_post_meta', __NAMESPACE__ . '\\remove_post_tags_from_post_meta' );
+/**
+ * Removes the post tags shortcode from post meta.
+ *
+ * @param string $post_meta Post meta, typically "[post_categories] [post_tags]"
+ * @return string
+ */
+function remove_post_tags_from_post_meta( $post_meta ) {
+	return str_replace( '[post_tags]', '', (string) $post_meta );
+}
+
 add_filter( 'shortcode_atts_post_categories', __NAMESPACE__ . '\\change_post_categories_list_prefix' );
 /**
  * Change post categories before text from "Filed Under:" to "Related Posts:".
