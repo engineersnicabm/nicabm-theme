@@ -195,6 +195,8 @@ div.pp_default .pp_bottom .pp_right {
 }
 
 .row {
+  position: relative;
+
   &--900 {
     max-width: 900px;
   }
