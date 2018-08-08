@@ -2,7 +2,7 @@
 /**
  * Sales Page Template
  * Template Name: NICABM Sales Page
- * Template Post Type: nicabm_program
+ * Template Post Type: nicabm_program, nicabm_confirm
  *
  * @package     NICABM\ChildTheme
  * @author      Tim Jensen <tim@timjensen.us>
